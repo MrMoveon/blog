@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Electron | 前端开发笔记</title>
+    <meta name="description" content="前端开发笔记">
+    <link rel="icon" href="/blog/icon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.45e5a3ae.css" as="style"><link rel="preload" href="/blog/assets/js/app.ee223f02.js" as="script"><link rel="preload" href="/blog/assets/js/2.f364336e.js" as="script"><link rel="preload" href="/blog/assets/js/7.d17b9335.js" as="script"><link rel="preload" href="/blog/assets/js/11.9d12addb.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.60d9a5c4.js"><link rel="prefetch" href="/blog/assets/js/12.8ef0bd8a.js"><link rel="prefetch" href="/blog/assets/js/13.71ffc42f.js"><link rel="prefetch" href="/blog/assets/js/14.25b3510a.js"><link rel="prefetch" href="/blog/assets/js/15.c4d91af5.js"><link rel="prefetch" href="/blog/assets/js/16.948c6a33.js"><link rel="prefetch" href="/blog/assets/js/17.0e6c3b39.js"><link rel="prefetch" href="/blog/assets/js/18.5f7af77b.js"><link rel="prefetch" href="/blog/assets/js/19.3d23eaff.js"><link rel="prefetch" href="/blog/assets/js/20.472050f8.js"><link rel="prefetch" href="/blog/assets/js/21.daaff1eb.js"><link rel="prefetch" href="/blog/assets/js/22.ae3ff2ee.js"><link rel="prefetch" href="/blog/assets/js/23.06d58a4e.js"><link rel="prefetch" href="/blog/assets/js/24.8df026f6.js"><link rel="prefetch" href="/blog/assets/js/25.8fa3c5ac.js"><link rel="prefetch" href="/blog/assets/js/26.b9e79cc9.js"><link rel="prefetch" href="/blog/assets/js/27.0c29d378.js"><link rel="prefetch" href="/blog/assets/js/28.5c6b388b.js"><link rel="prefetch" href="/blog/assets/js/29.a0f69e48.js"><link rel="prefetch" href="/blog/assets/js/3.641e1028.js"><link rel="prefetch" href="/blog/assets/js/30.dc7fbcb3.js"><link rel="prefetch" href="/blog/assets/js/31.a0f54c32.js"><link rel="prefetch" href="/blog/assets/js/32.06b2a848.js"><link rel="prefetch" href="/blog/assets/js/33.1707ffb1.js"><link rel="prefetch" href="/blog/assets/js/34.4a894dbb.js"><link rel="prefetch" href="/blog/assets/js/35.380e3cca.js"><link rel="prefetch" href="/blog/assets/js/36.cbda8a08.js"><link rel="prefetch" href="/blog/assets/js/37.a4ee9d32.js"><link rel="prefetch" href="/blog/assets/js/38.9d939308.js"><link rel="prefetch" href="/blog/assets/js/39.0db069f8.js"><link rel="prefetch" href="/blog/assets/js/4.dd025489.js"><link rel="prefetch" href="/blog/assets/js/40.7207834f.js"><link rel="prefetch" href="/blog/assets/js/41.a0452c50.js"><link rel="prefetch" href="/blog/assets/js/42.2122454f.js"><link rel="prefetch" href="/blog/assets/js/43.8bb0a71b.js"><link rel="prefetch" href="/blog/assets/js/44.3e769886.js"><link rel="prefetch" href="/blog/assets/js/5.2cc523f9.js"><link rel="prefetch" href="/blog/assets/js/6.86e346f0.js"><link rel="prefetch" href="/blog/assets/js/8.b2177cb3.js"><link rel="prefetch" href="/blog/assets/js/9.a8aca7d1.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.45e5a3ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">前端开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link router-link-exact-active router-link-active">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link router-link-exact-active router-link-active">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Electron</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/electron/#配置开发环境" class="sidebar-link">配置开发环境</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#安装electron" class="sidebar-link">安装electron</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#创建项目" class="sidebar-link">创建项目</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#运行项目" class="sidebar-link">运行项目</a></li></ul></li><li><a href="/blog/electron/#读取本地文件并显示" class="sidebar-link">读取本地文件并显示</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#模板" class="sidebar-link">模板</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#读取本地文件" class="sidebar-link">读取本地文件</a></li></ul></li><li><a href="/blog/electron/#实现拖放打开文件功能" class="sidebar-link">实现拖放打开文件功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#模板-2" class="sidebar-link">模板</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#拖放并打开文件" class="sidebar-link">拖放并打开文件</a></li></ul></li><li><a href="/blog/electron/#remote模块" class="sidebar-link">remote模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#remote-打开新窗口" class="sidebar-link">remote 打开新窗口</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#优雅地显示窗口" class="sidebar-link">优雅地显示窗口</a></li></ul></li><li><a href="/blog/electron/#菜单" class="sidebar-link">菜单</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#创建顶部菜单" class="sidebar-link">创建顶部菜单</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#创建右键菜单" class="sidebar-link">创建右键菜单</a></li></ul></li><li><a href="/blog/electron/#进程通信" class="sidebar-link">进程通信</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#主进程和渲染进程通信" class="sidebar-link">主进程和渲染进程通信</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#渲染进程和渲染进程通信" class="sidebar-link">渲染进程和渲染进程通信</a></li></ul></li><li><a href="/blog/electron/#shell-模块" class="sidebar-link">Shell 模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#打开浏览器" class="sidebar-link">打开浏览器</a></li></ul></li><li><a href="/blog/electron/#实现一个editplus编辑器" class="sidebar-link">实现一个editPlus编辑器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/electron/#创建项目-2" class="sidebar-link">创建项目</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#创建顶部菜单，右键菜单" class="sidebar-link">创建顶部菜单，右键菜单</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#html-模板" class="sidebar-link">html 模板</a></li><li class="sidebar-sub-header"><a href="/blog/electron/#编辑器主逻辑" class="sidebar-link">编辑器主逻辑</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="electron"><a href="#electron" aria-hidden="true" class="header-anchor">#</a> Electron <span class="badge tip" style="vertical-align:top;" data-v-c13ee5b0>5.0+</span></h1> <p>Electron是由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的一个开源库。 Electron通过将Chromium和Node.js合并到同一个运行时环境中，并将其打包为Mac，Windows和Linux系统下的应用来实现这一目的。</p> <p><a href="https://gitee.com/mf/study-electron.git" target="_blank" rel="noopener noreferrer">以下示例github项目地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="配置开发环境"><a href="#配置开发环境" aria-hidden="true" class="header-anchor">#</a> 配置开发环境</h2> <p>Windows 开发环境配置</p> <p>安装最新版本的 == Node.js == 。推荐安装最新的 长期支持版本 或者 当前发行版本 ，访问 <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener noreferrer">nodejs官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，选择Windows Installer。 下载完成后， 执行安装程序，根据引导完成安装即可。</p> <p>安装完成，查看nodejs和npm版本</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 下面这行的命令会打印出Node.js的版本信息</span>
+node -v
+
+<span class="token comment"># 下面这行的命令会打印出npm的版本信息</span>
+<span class="token function">npm</span> -v
+</code></pre></div><h3 id="安装electron"><a href="#安装electron" aria-hidden="true" class="header-anchor">#</a> 安装electron</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 全局安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g electron
+<span class="token comment"># 创建目录</span>
+<span class="token function">mkdir</span> demo
+<span class="token comment"># 进入目录</span>
+<span class="token builtin class-name">cd</span> demo
+<span class="token comment"># npm初始化</span>
+<span class="token function">npm</span> init
+<span class="token comment"># 项目中安装electron</span>
+<span class="token function">npm</span> <span class="token function">install</span> -D electron
+
+</code></pre></div><h3 id="创建项目"><a href="#创建项目" aria-hidden="true" class="header-anchor">#</a> 创建项目</h3> <p>在demo文件夹下创建主进程 main.js 和渲染进程模板 index.html</p> <p><strong>index.html</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ie=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    hello electron 2
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><strong>main.js</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> app<span class="token punctuation">,</span> BrowserWindow <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;electron&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 创建一个主窗口</span>
+<span class="token keyword">let</span> mainWindow <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">createWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  mainWindow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">800</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+    webPreferences<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      nodeIntegration<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 载入模板文件</span>
+  mainWindow<span class="token punctuation">.</span><span class="token function">loadFile</span><span class="token punctuation">(</span><span class="token string">&quot;./index.html&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 打开开发调试工具</span>
+  mainWindow<span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">openDevTools</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  mainWindow<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;closed&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    mainWindow <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// app 准备好，创建window</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;ready&quot;</span><span class="token punctuation">,</span>createWindow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;window-all-closed&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 在macOS上，应用程序及其菜单栏是常见的</span>
+    <span class="token comment">// 在用户显式退出Cmd + Q之前保持活动状态</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>platform <span class="token operator">!==</span> <span class="token string">'darwin'</span><span class="token punctuation">)</span> app<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;activate&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 在mac上，通常会在应用程序中重新创建一个窗口</span>
+    <span class="token comment">// 单击dock图标，没有其他窗口就打开</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>mainWindow<span class="token punctuation">)</span> <span class="token function">createWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="danger custom-block"><p>在最新的electron 5.x版本中默认没法在渲染进程引入模块，渲染进程会提示 require is not defined,解决方案：需要在BrowserWindow属性里配置webPreferences</p></div> <div class="language-javascript extra-class"><pre class="language-javascript"><code> mainWindow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">800</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+    <span class="token comment">// 必须加上以下代码</span>
+    webPreferences<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      nodeIntegration<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="运行项目"><a href="#运行项目" aria-hidden="true" class="header-anchor">#</a> 运行项目</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>electron <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 或者在package.json 添加start</span>
+
+<span class="token function">npm</span> start
+
+</code></pre></div><p><strong>package.json</strong></p> <div class="language-json extra-class"><pre class="language-json"><code>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;study-electron&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;main.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span><span class="token string">&quot;electron .&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;git&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://gitee.com/mf/study-electron.git&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;afei&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;electron&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^5.0.2&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="读取本地文件并显示"><a href="#读取本地文件并显示" aria-hidden="true" class="header-anchor">#</a> 读取本地文件并显示</h2> <div class="tip custom-block"><p>Nodejs 在主进程和渲染进程中都可以使用。渲染进程因为安全限制，不能直接操作原生 GUI。虽然如此，<strong>因为集成了Nodejs，渲染进程也有了操作系统底层 API 的能力</strong>，Nodejs中常用的 Path、fs、Crypto 等模块在Electron 可以直接使用，方便我们处理链接、路径、文件 MD5 等，同时 npm 还有成千上万的模块供我们选择。</p></div> <h3 id="模板"><a href="#模板" aria-hidden="true" class="header-anchor">#</a> 模板</h3> <p>在模板中添加按钮和文本框,以及render.js</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ie=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">*,body</span><span class="token punctuation">{</span>
+            <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">html,body</span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+            <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">#content</span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span>
+            
+        <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>读取文件<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./render.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="读取本地文件"><a href="#读取本地文件" aria-hidden="true" class="header-anchor">#</a> 读取本地文件</h3> <p>通过nodejs fs 文件模块，读取文件，显示到页面上</p> <p><strong>render.js</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// fs 文件模块</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#btn&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> content <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#content&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 按钮点击读取文件，显示到文本框里面</span>
+btn<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">&quot;./package.json&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;utf-8&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    content<span class="token punctuation">.</span>value <span class="token operator">=</span> data<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p><img src="/blog/assets/img/electron-01.90d61703.png" alt="image"></p> <h2 id="实现拖放打开文件功能"><a href="#实现拖放打开文件功能" aria-hidden="true" class="header-anchor">#</a> 实现拖放打开文件功能</h2> <div class="tip custom-block"><p>这里用到h5的drag api,将文件拖动到窗口内部，获取到拖动文件的路径，再通过node fs模块读取内容，显示到页面中</p></div> <h3 id="模板-2"><a href="#模板-2" aria-hidden="true" class="header-anchor">#</a> 模板</h3> <p><strong>index.html</strong></p> <div class="language-html extra-class"><pre class="language-html"><code>
+<span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ie=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+        <span class="token selector">*,body</span><span class="token punctuation">{</span>
+            <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">html,body</span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+            <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">#drag-area</span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span>500px<span class="token punctuation">;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">#drag-area img</span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> 100%
+        <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>drag-area<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./render.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="拖放并打开文件"><a href="#拖放并打开文件" aria-hidden="true" class="header-anchor">#</a> 拖放并打开文件</h3> <p><strong>render.js</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> area <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#drag-area&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 阻止拖动区域开始拖动，拖动中的默认事件</span>
+area<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;dragover&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+area<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;dragstart&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 监听拖动放置事件，如果是文本，写入到拖动区域</span>
+area<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;drop&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+    <span class="token comment">// 判断文件类型</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>dataTransfer<span class="token punctuation">.</span>items<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> type <span class="token operator">=</span> e<span class="token punctuation">.</span>dataTransfer<span class="token punctuation">.</span>items<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+    
+    <span class="token comment">// 文件路径</span>
+    <span class="token keyword">var</span> path <span class="token operator">=</span> e<span class="token punctuation">.</span>dataTransfer<span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>path
+
+    <span class="token comment">// 读取文件，并插入</span>
+    fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">checkType</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span>path<span class="token punctuation">,</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 检测文件类型，并插入到area</span>
+<span class="token keyword">function</span> <span class="token function">checkType</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span>path<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>type<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">&quot;image&quot;</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">var</span> img <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       img<span class="token punctuation">.</span>src <span class="token operator">=</span>path<span class="token punctuation">;</span>
+       area<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>type<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">&quot;text&quot;</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        area<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> data
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="/blog/assets/img/electron-02.1292b91e.png" alt="拖动 .txt文件，及图片文件后的示例"></p> <h2 id="remote模块"><a href="#remote模块" aria-hidden="true" class="header-anchor">#</a> remote模块</h2> <div class="tip custom-block"><p>remote  模块提供了一种在渲染进程（网页）和主进程之间进行进程间通讯（IPC）的简便途径。</p> <p>Electron  中, 与 与 GUI 块 相关的模块 （如 如 dialog, menu  等) 只存在于主进程中而不在渲染进程中 。</p> <p>为了能从渲染进程中使用它们，需要用ipc模块来给主进程发送进程间消息。<strong>使用 remote 模块，可以调用主进程对象的方法</strong>，而无需显式地发送进程间消息。</p></div> <h3 id="remote-打开新窗口"><a href="#remote-打开新窗口" aria-hidden="true" class="header-anchor">#</a> remote 打开新窗口</h3> <p>在渲染进程中，可以直接通过remote模块打开窗口</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> BrowserWindow <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;electron&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>remote<span class="token punctuation">;</span>
+<span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#btn&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> win <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+btn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  win <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
+    frame<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment">// 无边框窗口</span>
+    fullscreen<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment">// 打开全屏显示窗口</span>
+    show<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 打开窗口不显示</span>
+    <span class="token comment">// backgroundColor: '#2e2c29', //窗口背景色</span>
+    webPreferences<span class="token punctuation">:</span><span class="token punctuation">{</span>
+      nodeIntegration<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 载入模板</span>
+  win<span class="token punctuation">.</span><span class="token function">loadFile</span><span class="token punctuation">(</span><span class="token string">&quot;./index.html&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 渲染进程完成绘制时,显示窗口，窗口将没有视觉闪烁</span>
+  win<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'ready-to-show'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    win<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  win<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;closed&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    win <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="优雅地显示窗口"><a href="#优雅地显示窗口" aria-hidden="true" class="header-anchor">#</a> 优雅地显示窗口</h3> <p>当页面在窗口中直接加载时，用户会看到未完成的页面，这不是一个好的原生应用的体验。为了让画面准备好了再显示，这有两种不同的解决方案。</p> <h5 id="使用ready-to-show事件"><a href="#使用ready-to-show事件" aria-hidden="true" class="header-anchor">#</a> 使用ready-to-show事件</h5> <p>在加载页面时，渲染进程第一次完成绘制时，会发出 ready-to-show 事件 。 在此事件后显示窗口将没有视觉闪烁：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 创建窗口 默认不显示</span>
+<span class="token keyword">let</span> win <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span> show<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 窗口加载完毕，显示</span>
+win<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'ready-to-show'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  win<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h5 id="设置-backgroundcolor"><a href="#设置-backgroundcolor" aria-hidden="true" class="header-anchor">#</a> 设置 backgroundColor</h5> <p>对于一个复杂的应用，ready-to-show 可能发出的太晚，会让应用感觉缓慢。 在这种情况下，建议立刻显示窗口，并使用接近应用程序背景的 backgroundColor</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> BrowserWindow <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'electron'</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> win <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span> backgroundColor<span class="token punctuation">:</span> <span class="token string">'#2e2c29'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+win<span class="token punctuation">.</span><span class="token function">loadURL</span><span class="token punctuation">(</span><span class="token string">'https://github.com'</span><span class="token punctuation">)</span>
+</code></pre></div><blockquote><p>请注意，即使是使用 ready-to-show 事件的应用程序，仍建议使用设置 backgroundColor 使应用程序感觉更原生</p></blockquote> <h2 id="菜单"><a href="#菜单" aria-hidden="true" class="header-anchor">#</a> 菜单</h2> <h3 id="创建顶部菜单"><a href="#创建顶部菜单" aria-hidden="true" class="header-anchor">#</a> 创建顶部菜单</h3> <p><strong>创建顶部菜单列表 menu.js</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 创建菜单列表</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      label<span class="token punctuation">:</span> <span class="token string">&quot;文件&quot;</span><span class="token punctuation">,</span>
+      submenu<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          label<span class="token punctuation">:</span> <span class="token string">&quot;新建文件&quot;</span><span class="token punctuation">,</span>
+          <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;create file&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          label<span class="token punctuation">:</span> <span class="token string">&quot;新建窗口&quot;</span><span class="token punctuation">,</span>
+          <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;new window&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      label<span class="token punctuation">:</span> <span class="token string">&quot;编辑&quot;</span><span class="token punctuation">,</span>
+      submenu<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> role<span class="token punctuation">:</span> <span class="token string">'cut'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> role<span class="token punctuation">:</span> <span class="token string">'copy'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">&quot;粘贴&quot;</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">&quot;paste&quot;</span><span class="token punctuation">,</span> accelerator<span class="token punctuation">:</span> <span class="token string">&quot;ctrl+b&quot;</span> <span class="token punctuation">}</span> <span class="token comment">//accelerator 自定义快捷键</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      label<span class="token punctuation">:</span><span class="token string">&quot;帮助&quot;</span><span class="token punctuation">,</span>
+      <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 跳转到网页</span>
+        <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'electron'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>shell<span class="token punctuation">.</span><span class="token function">openExternalSync</span><span class="token punctuation">(</span><span class="token string">'https://electronjs.org'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+
+</code></pre></div><p><strong>主进程中引入menu,并创建顶部菜单</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 创建顶部菜单</span>
+  <span class="token keyword">const</span> menu <span class="token operator">=</span> Menu<span class="token punctuation">.</span><span class="token function">buildFromTemplate</span><span class="token punctuation">(</span>menuTpl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Menu<span class="token punctuation">.</span><span class="token function">setApplicationMenu</span><span class="token punctuation">(</span>menu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>完整代码</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> app<span class="token punctuation">,</span>BrowserWindow<span class="token punctuation">,</span>Menu <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;electron&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> menuTpl <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./menu.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 创建一个主窗口</span>
+<span class="token keyword">let</span> mainWindow <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">createWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  mainWindow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">800</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+    webPreferences<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      nodeIntegration<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 载入模板文件</span>
+  mainWindow<span class="token punctuation">.</span><span class="token function">loadFile</span><span class="token punctuation">(</span><span class="token string">&quot;./index.html&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 打开开发调试工具</span>
+  mainWindow<span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">openDevTools</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  mainWindow<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;closed&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    mainWindow <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 创建顶部菜单</span>
+  <span class="token keyword">const</span> menu <span class="token operator">=</span> Menu<span class="token punctuation">.</span><span class="token function">buildFromTemplate</span><span class="token punctuation">(</span>menuTpl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Menu<span class="token punctuation">.</span><span class="token function">setApplicationMenu</span><span class="token punctuation">(</span>menu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// app 准备好，创建window</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;ready&quot;</span><span class="token punctuation">,</span> createWindow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;window-all-closed&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 在macOS上，应用程序及其菜单栏是常见的</span>
+  <span class="token comment">// 在用户显式退出Cmd + Q之前保持活动状态</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>platform <span class="token operator">!==</span> <span class="token string">&quot;darwin&quot;</span><span class="token punctuation">)</span> app<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;activate&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 在mac上，通常会在应用程序中重新创建一个窗口</span>
+  <span class="token comment">// 单击dock图标，没有其他窗口就打开</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>mainWindow<span class="token punctuation">)</span> <span class="token function">createWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p><img src="/blog/assets/img/electron-03.98f4da4e.png" alt="菜单截图"></p> <h3 id="创建右键菜单"><a href="#创建右键菜单" aria-hidden="true" class="header-anchor">#</a> 创建右键菜单</h3> <p>在渲染进程render.js创建右键菜单</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>remote<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;electron&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>Menu<span class="token punctuation">}</span> <span class="token operator">=</span> remote<span class="token punctuation">;</span>
+<span class="token keyword">const</span> menuTpl <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./menu.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 创建菜单模板</span>
+<span class="token keyword">const</span> menu <span class="token operator">=</span> Menu<span class="token punctuation">.</span><span class="token function">buildFromTemplate</span><span class="token punctuation">(</span>menuTpl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 自定义右键菜单</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;contextmenu&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    menu<span class="token punctuation">.</span><span class="token function">popup</span><span class="token punctuation">(</span><span class="token punctuation">{</span>window<span class="token punctuation">:</span>remote<span class="token punctuation">.</span><span class="token function">getCurrentWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="进程通信"><a href="#进程通信" aria-hidden="true" class="header-anchor">#</a> 进程通信</h2> <h3 id="主进程和渲染进程通信"><a href="#主进程和渲染进程通信" aria-hidden="true" class="header-anchor">#</a> 主进程和渲染进程通信</h3> <p>有时候我们想在渲染进程中通过一个事件去执行主进程里面的方法。或者在渲染进程中通知主进程处理事件，主进程处理完成后广播一个事件让渲染进程去处理一些事情。这个时候就用到了主进程和渲染进程之间的相互通信。</p> <p><strong>Electron  主进程，和渲染进程的通信主要用到两个模块：ipcMain 和 和 ipcRenderer</strong></p> <p><strong>ipcMain ：</strong> 当在主进程中使用时，它处理从渲染器进程（网页）发送出来的异步和同步信息,当然也有可能从主进程向渲染进程发送消息。</p> <p><strong>ipcRenderer：</strong> 使用它提供的一些方法从渲染进程 (web 页面) 发送同步或异步的消息到主
+进程。 也可以接收主进程回复的消息。</p> <p><strong>场景 1 ：</strong> 渲染进程给主进程发送异步消息</p> <p><strong>场景 2 ：</strong> 渲染进程给主进程发送异步消息，主进程接收到异步消息以后通知渲染进程：</p> <p><strong>主进程</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>ipcMain <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;electron&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ipcMain<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+ipcMain<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;msg&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;主进程接收到渲染进程的消息：&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;通知渲染进程可以开始了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    event<span class="token punctuation">.</span>sender<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>渲染进程</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>ipcRenderer<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;electron&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> btn1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#btn1&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> btn2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#btn2&quot;</span><span class="token punctuation">)</span>
+
+
+btn1<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  ipcRenderer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;渲染进程给主进程发送了一个消息&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+btn2<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  ipcRenderer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">&quot;msg&quot;</span><span class="token punctuation">,</span><span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+ipcRenderer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;start&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;主进程返回渲染进程的消息:&quot;</span><span class="token operator">+</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p><img src="/blog/assets/img/electron-04.feda8aec.png" alt="image"></p> <h3 id="渲染进程和渲染进程通信"><a href="#渲染进程和渲染进程通信" aria-hidden="true" class="header-anchor">#</a> 渲染进程和渲染进程通信</h3> <p><strong>方式一：通过localstorage给另一个渲染进程传值</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>方式二：通过 BrowserWindow 和 和 webContents  模块实现渲染进
+程和渲染进程的通信</strong></p> <p>webContents 是一个事件发出者.它负责渲染并控制网页，也是BrowserWindow 对象的属性。</p> <p>需要了解的几个知识点：</p> <p>1 、获取当前窗口的 id：</p> <div class="language- extra-class"><pre class="language-text"><code>const winId = BrowserWindow.getFocusedWindow().id;
+</code></pre></div><p>2、监听当前窗口加载完成的事件</p> <div class="language- extra-class"><pre class="language-text"><code>win.webContents.on('did-finish-load',(event) =&gt; { })
+</code></pre></div><p>3、同一窗口之间广播数据</p> <div class="language- extra-class"><pre class="language-text"><code>win.webContents.on('did-finish-load',(event) =&gt; {
+    win.webContents.send('msg',winId,'我是 index.html 的数据');
+})
+</code></pre></div><p>4、通过 id 查找窗口</p> <div class="language- extra-class"><pre class="language-text"><code>let win = BrowserWindow.fromId(winId);
+</code></pre></div><h2 id="shell-模块"><a href="#shell-模块" aria-hidden="true" class="header-anchor">#</a> Shell 模块</h2> <p>shell 模块提供了集成其他桌面客户端的关联功能,使用默认应用程序管理文件和 url</p> <h3 id="打开浏览器"><a href="#打开浏览器" aria-hidden="true" class="header-anchor">#</a> 打开浏览器</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">var</span> shell <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'shell'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//通过默认浏览器打开网页</span>
+shell<span class="token punctuation">.</span><span class="token function">openExternal</span><span class="token punctuation">(</span><span class="token string">'https://github.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="实现一个editplus编辑器"><a href="#实现一个editplus编辑器" aria-hidden="true" class="header-anchor">#</a> 实现一个editPlus编辑器</h2> <p>通过以上知识点，实现一个记事本</p> <ul><li>[x] 通过菜单打开文件</li> <li>[x] 编辑了文件顶部显示小圆点</li> <li>[x] 编辑了文件打开新文件提示保存</li> <li>[x] 新建文件功能</li> <li>[x] 实现顶部菜单，右键菜单常用功能</li></ul> <h3 id="创建项目-2"><a href="#创建项目-2" aria-hidden="true" class="header-anchor">#</a> 创建项目</h3> <blockquote><p>使用electron-forge  搭建一个 electron 项目
+electron-forge 相当于electron的一个脚手架，可以让我们更方便的创建、运行、打包electron 项目。</p></blockquote> <p><strong>全局安装 electron-forge</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> -g electron-forge
+</code></pre></div><p><strong>初始化项目</strong></p> <div class="language- extra-class"><pre class="language-text"><code>electron-forge init editPlus
+
+cd editPlus
+
+npm start
+</code></pre></div><h3 id="创建顶部菜单，右键菜单"><a href="#创建顶部菜单，右键菜单" aria-hidden="true" class="header-anchor">#</a> 创建顶部菜单，右键菜单</h3> <p>在src目录下，创建main和render目录，存放主进程和渲染进程的代码</p> <p><img src="/blog/assets/img/electron-05.eaf0ed0a.png" alt="目录"></p> <p><strong>ipcMain.js</strong> 创建菜单列表，并导出供主进程使用</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Menu<span class="token punctuation">,</span> BrowserWindow<span class="token punctuation">,</span> ipcMain<span class="token punctuation">,</span> shell<span class="token punctuation">,</span> app <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'electron'</span><span class="token punctuation">;</span>
+<span class="token comment">// 顶部菜单模板</span>
+<span class="token keyword">const</span> topMenutpl <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    label<span class="token punctuation">:</span> <span class="token string">'文件'</span><span class="token punctuation">,</span>
+    submenu<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token punctuation">:</span> <span class="token string">'新建'</span><span class="token punctuation">,</span>
+        accelerator<span class="token punctuation">:</span> <span class="token string">'ctrl+n'</span><span class="token punctuation">,</span>
+        <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          BrowserWindow<span class="token punctuation">.</span><span class="token function">getFocusedWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'action'</span><span class="token punctuation">,</span> <span class="token string">'new'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token punctuation">:</span> <span class="token string">'打开'</span><span class="token punctuation">,</span>
+        accelerator<span class="token punctuation">:</span> <span class="token string">'ctrl+o'</span><span class="token punctuation">,</span>
+        <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 主进程向渲染进程发送动作</span>
+          <span class="token comment">// 先获取当前窗口，通过webContents.send发送</span>
+          BrowserWindow<span class="token punctuation">.</span><span class="token function">getFocusedWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'action'</span><span class="token punctuation">,</span> <span class="token string">'open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token punctuation">:</span> <span class="token string">'保存'</span><span class="token punctuation">,</span>
+        accelerator<span class="token punctuation">:</span> <span class="token string">'ctrl+s'</span><span class="token punctuation">,</span>
+        <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          BrowserWindow<span class="token punctuation">.</span><span class="token function">getFocusedWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'action'</span><span class="token punctuation">,</span> <span class="token string">'save'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token punctuation">:</span> <span class="token string">'退出'</span><span class="token punctuation">,</span>
+        accelerator<span class="token punctuation">:</span> <span class="token string">'ctrl+q'</span><span class="token punctuation">,</span>
+        <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          BrowserWindow<span class="token punctuation">.</span><span class="token function">getFocusedWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'action'</span><span class="token punctuation">,</span> <span class="token string">'quit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    label<span class="token punctuation">:</span> <span class="token string">'编辑'</span><span class="token punctuation">,</span>
+    submenu<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'撤销'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'undo'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'恢复'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'redo'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'剪切'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'cut'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'复制'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'copy'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'粘贴'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'paste'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'删除'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'delete'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'全选'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'selectall'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    label<span class="token punctuation">:</span> <span class="token string">'视图'</span><span class="token punctuation">,</span>
+    submenu<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'reload'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'reload'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'forcereload'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'forcereload'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'toggledevtools'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'toggledevtools'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'放大'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'zoomin'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'缩小'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'zoomout'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'重置缩放'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'resetzoom'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'全屏'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'togglefullscreen'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    label<span class="token punctuation">:</span> <span class="token string">'帮助'</span><span class="token punctuation">,</span>
+    submenu<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token punctuation">:</span> <span class="token string">'关于'</span><span class="token punctuation">,</span>
+        <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          shell<span class="token punctuation">.</span><span class="token function">openExternal</span><span class="token punctuation">(</span><span class="token string">'https://electronjs.org/docs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 右键菜单模板</span>
+<span class="token keyword">const</span> contextMenuTpl <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'撤销'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'undo'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'恢复'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'redo'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'剪切'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'cut'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'复制'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'copy'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'粘贴'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'paste'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'删除'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'delete'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> label<span class="token punctuation">:</span> <span class="token string">'全选'</span><span class="token punctuation">,</span> role<span class="token punctuation">:</span> <span class="token string">'selectall'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">createTopMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">createContextMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">listenerQuit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 创建顶部菜单</span>
+  <span class="token function">createTopMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> menu <span class="token operator">=</span> Menu<span class="token punctuation">.</span><span class="token function">buildFromTemplate</span><span class="token punctuation">(</span>topMenutpl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Menu<span class="token punctuation">.</span><span class="token function">setApplicationMenu</span><span class="token punctuation">(</span>menu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 创建右键菜单</span>
+  <span class="token function">createContextMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ipcMain<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'contextmenu'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> menu <span class="token operator">=</span> Menu<span class="token punctuation">.</span><span class="token function">buildFromTemplate</span><span class="token punctuation">(</span>contextMenuTpl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      menu<span class="token punctuation">.</span><span class="token function">popup</span><span class="token punctuation">(</span><span class="token punctuation">{</span> window<span class="token punctuation">:</span> BrowserWindow<span class="token punctuation">.</span><span class="token function">getFocusedWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 监听退出app</span>
+  <span class="token function">listenerQuit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ipcMain<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'quit'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> main<span class="token punctuation">;</span>
+
+
+</code></pre></div><p>主进程<strong>index.js</strong>引入 ./main/ipcMain 并执行</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> app<span class="token punctuation">,</span> BrowserWindow <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'electron'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> main <span class="token keyword">from</span> <span class="token string">'./main/ipcMain'</span><span class="token punctuation">;</span>
+<span class="token comment">// Handle creating/removing shortcuts on Windows when installing/uninstalling.</span>
+
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'electron-squirrel-startup'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Keep a global reference of the window object, if you don't, the window will</span>
+<span class="token comment">// be closed automatically when the JavaScript object is garbage collected.</span>
+<span class="token keyword">let</span> mainWindow<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">createWindow</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Create the browser window.</span>
+  mainWindow <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BrowserWindow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">800</span><span class="token punctuation">,</span>
+    height<span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+    webPreferences<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      nodeIntegration<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// and load the index.html of the app.</span>
+  mainWindow<span class="token punctuation">.</span><span class="token function">loadURL</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">file://</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>__dirname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/index.html</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Open the DevTools.</span>
+  mainWindow<span class="token punctuation">.</span>webContents<span class="token punctuation">.</span><span class="token function">openDevTools</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Emitted when the window is closed.</span>
+  mainWindow<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'closed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Dereference the window object, usually you would store windows</span>
+    <span class="token comment">// in an array if your app supports multi windows, this is the time</span>
+    <span class="token comment">// when you should delete the corresponding element.</span>
+    mainWindow <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 执行主进程的一些逻辑：创建菜单，发送消息</span>
+  main<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// This method will be called when Electron has finished</span>
+<span class="token comment">// initialization and is ready to create browser windows.</span>
+<span class="token comment">// Some APIs can only be used after this event occurs.</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'ready'</span><span class="token punctuation">,</span> createWindow<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Quit when all windows are closed.</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'window-all-closed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// On OS X it is common for applications and their menu bar</span>
+  <span class="token comment">// to stay active until the user quits explicitly with Cmd + Q</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>platform <span class="token operator">!==</span> <span class="token string">'darwin'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    app<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'activate'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// On OS X it's common to re-create a window in the app when the</span>
+  <span class="token comment">// dock icon is clicked and there are no other windows open.</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>mainWindow <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">createWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// In this file you can include the rest of your app's specific main process</span>
+<span class="token comment">// code. You can also put them in separate files and import them here.</span>
+
+</code></pre></div><h3 id="html-模板"><a href="#html-模板" aria-hidden="true" class="header-anchor">#</a> html 模板</h3> <p>html 模板文件，引入edit.js</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;无标题&lt;/title&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;style&gt;
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      html,body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      #editContent{
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        outline: none;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;textarea id=&quot;editContent&quot;&gt;&lt;/textarea&gt;
+    &lt;script src=&quot;./render/edit.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre></div><h3 id="编辑器主逻辑"><a href="#编辑器主逻辑" aria-hidden="true" class="header-anchor">#</a> 编辑器主逻辑</h3> <p><strong>edit.js</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> ipcRenderer<span class="token punctuation">,</span> remote <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'electron'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">'fs'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> dialog <span class="token punctuation">}</span> <span class="token operator">=</span> remote<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">EditPlus</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token comment">// 正在编辑的文件</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>isEdit <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token comment">// 正在编辑的文件路径</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>filePath <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token comment">// 新建文件名称</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>newFileName <span class="token operator">=</span> <span class="token string">'无标题'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取dom</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 创建右键菜单</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">contextmenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 监听菜单的点击事件</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">listenerAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">getDom</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>editDom <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 用户输入的时候，编辑状态</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>editDom<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> fileName <span class="token operator">=</span> self<span class="token punctuation">.</span>filePath <span class="token operator">||</span> self<span class="token punctuation">.</span>newFileName<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>isEdit <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token comment">// 设置标题</span>
+      self<span class="token punctuation">.</span><span class="token function">editWindowName</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">●</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">contextmenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'contextmenu'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      ipcRenderer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'contextmenu'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">listenerAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    ipcRenderer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'action'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">switch</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">case</span> <span class="token string">'new'</span><span class="token punctuation">:</span>
+          <span class="token comment">// 创建文件</span>
+        self<span class="token punctuation">.</span><span class="token function">createFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token string">'open'</span><span class="token punctuation">:</span>
+          <span class="token comment">// 打开文件</span>
+        self<span class="token punctuation">.</span><span class="token function">openFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token string">'save'</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token function">saveFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token string">'quit'</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token function">quitFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">default</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">createFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isEdit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleQustionSave</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        self<span class="token punctuation">.</span><span class="token function">saveFile</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          self<span class="token punctuation">.</span><span class="token function">setEditAttr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setEditAttr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setEditAttr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">setEditAttr</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> isEdit <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> pathName <span class="token operator">=</span> path <span class="token operator">||</span> <span class="token keyword">this</span><span class="token punctuation">.</span>newFileName<span class="token punctuation">;</span>
+    <span class="token comment">// 改为非编辑模式</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>isEdit <span class="token operator">=</span> isEdit<span class="token punctuation">;</span>
+    <span class="token comment">// 清空内容</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>editDom<span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token comment">// 清空文件路径</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>filePath <span class="token operator">=</span> path<span class="token punctuation">;</span>
+    <span class="token comment">// 设置标题</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">editWindowName</span><span class="token punctuation">(</span>pathName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">openFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isEdit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleQustionSave</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        self<span class="token punctuation">.</span><span class="token function">saveFile</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          self<span class="token punctuation">.</span><span class="token function">setEditAttr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleOpenDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleOpenDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 触发打开文件弹窗</span>
+  <span class="token function">handleOpenDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    dialog<span class="token punctuation">.</span><span class="token function">showOpenDialog</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span>
+        title<span class="token punctuation">:</span> <span class="token string">'打开文件'</span><span class="token punctuation">,</span>
+        properties<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'openFile'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 点取消时，res为undefined,点确定为数组，单选路径取第一个</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> path <span class="token operator">=</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              self<span class="token punctuation">.</span><span class="token function">setEditAttr</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 询问是否保存</span>
+  <span class="token function">handleQustionSave</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>filePath<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> text <span class="token operator">=</span> filePath <span class="token operator">||</span> <span class="token keyword">this</span><span class="token punctuation">.</span>newFileName<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> index <span class="token operator">=</span> dialog<span class="token punctuation">.</span><span class="token function">showMessageBox</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+        buttons<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'yes'</span><span class="token punctuation">,</span> <span class="token string">'no'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> <span class="token string">'editPlus'</span><span class="token punctuation">,</span>
+        detail<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">是否将更改保存到</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>text<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">中？</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'ok'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'cancal'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">saveFile</span><span class="token punctuation">(</span><span class="token function-variable function">callback</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> self<span class="token punctuation">.</span>editDom<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> basename <span class="token operator">=</span> self<span class="token punctuation">.</span>filePath <span class="token operator">?</span> path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>filePath<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token string">'*.txt'</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> callbackFn <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      callbackFn <span class="token operator">=</span> callback<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// const fileName = self.filePath || ;</span>
+    <span class="token comment">// 存在文件路径，直接保存</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>filePath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      self<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>filePath<span class="token punctuation">,</span> content<span class="token punctuation">,</span> callbackFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 不存在，弹出框选择地址保存</span>
+    dialog<span class="token punctuation">.</span><span class="token function">showSaveDialog</span><span class="token punctuation">(</span>
+      <span class="token punctuation">{</span>
+        title<span class="token punctuation">:</span> <span class="token string">'保存文件'</span><span class="token punctuation">,</span>
+        defaultPath<span class="token punctuation">:</span> basename<span class="token punctuation">,</span>
+        filters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'All Files'</span><span class="token punctuation">,</span> extensions<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'*'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          self<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> content<span class="token punctuation">,</span> callbackFn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">quitFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isEdit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">handleQustionSave</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        self<span class="token punctuation">.</span><span class="token function">saveFile</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">//  退出文件</span>
+          ipcRenderer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'quit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        ipcRenderer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'quit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">//  退出文件</span>
+      ipcRenderer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'quit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">writeFile</span><span class="token punctuation">(</span><span class="token parameter">res<span class="token punctuation">,</span> content<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> content<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 保存成功，非编辑状态</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'保存成功'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span>isEdit <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span>filePath <span class="token operator">=</span> res<span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span><span class="token function">editWindowName</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>self<span class="token punctuation">.</span>filePath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">editWindowName</span><span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>title <span class="token operator">=</span> title<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> editPlus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EditPlus</span><span class="token punctuation">(</span><span class="token string">'#editContent'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  editPlus<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+</code></pre></div><p><img src="/blog/assets/img/electron-06.d77f080c.png" alt="运行截图"></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">6/12/2019, 4:46:57 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.ee223f02.js" defer></script><script src="/blog/assets/js/2.f364336e.js" defer></script><script src="/blog/assets/js/7.d17b9335.js" defer></script><script src="/blog/assets/js/11.9d12addb.js" defer></script>
+  </body>
+</html>

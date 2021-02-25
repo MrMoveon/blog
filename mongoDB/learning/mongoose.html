@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mongoose | 前端开发笔记</title>
+    <meta name="description" content="前端开发笔记">
+    <link rel="icon" href="/blog/icon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.45e5a3ae.css" as="style"><link rel="preload" href="/blog/assets/js/app.ee223f02.js" as="script"><link rel="preload" href="/blog/assets/js/2.f364336e.js" as="script"><link rel="preload" href="/blog/assets/js/13.71ffc42f.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.60d9a5c4.js"><link rel="prefetch" href="/blog/assets/js/11.9d12addb.js"><link rel="prefetch" href="/blog/assets/js/12.8ef0bd8a.js"><link rel="prefetch" href="/blog/assets/js/14.25b3510a.js"><link rel="prefetch" href="/blog/assets/js/15.c4d91af5.js"><link rel="prefetch" href="/blog/assets/js/16.948c6a33.js"><link rel="prefetch" href="/blog/assets/js/17.0e6c3b39.js"><link rel="prefetch" href="/blog/assets/js/18.5f7af77b.js"><link rel="prefetch" href="/blog/assets/js/19.3d23eaff.js"><link rel="prefetch" href="/blog/assets/js/20.472050f8.js"><link rel="prefetch" href="/blog/assets/js/21.daaff1eb.js"><link rel="prefetch" href="/blog/assets/js/22.ae3ff2ee.js"><link rel="prefetch" href="/blog/assets/js/23.06d58a4e.js"><link rel="prefetch" href="/blog/assets/js/24.8df026f6.js"><link rel="prefetch" href="/blog/assets/js/25.8fa3c5ac.js"><link rel="prefetch" href="/blog/assets/js/26.b9e79cc9.js"><link rel="prefetch" href="/blog/assets/js/27.0c29d378.js"><link rel="prefetch" href="/blog/assets/js/28.5c6b388b.js"><link rel="prefetch" href="/blog/assets/js/29.a0f69e48.js"><link rel="prefetch" href="/blog/assets/js/3.641e1028.js"><link rel="prefetch" href="/blog/assets/js/30.dc7fbcb3.js"><link rel="prefetch" href="/blog/assets/js/31.a0f54c32.js"><link rel="prefetch" href="/blog/assets/js/32.06b2a848.js"><link rel="prefetch" href="/blog/assets/js/33.1707ffb1.js"><link rel="prefetch" href="/blog/assets/js/34.4a894dbb.js"><link rel="prefetch" href="/blog/assets/js/35.380e3cca.js"><link rel="prefetch" href="/blog/assets/js/36.cbda8a08.js"><link rel="prefetch" href="/blog/assets/js/37.a4ee9d32.js"><link rel="prefetch" href="/blog/assets/js/38.9d939308.js"><link rel="prefetch" href="/blog/assets/js/39.0db069f8.js"><link rel="prefetch" href="/blog/assets/js/4.dd025489.js"><link rel="prefetch" href="/blog/assets/js/40.7207834f.js"><link rel="prefetch" href="/blog/assets/js/41.a0452c50.js"><link rel="prefetch" href="/blog/assets/js/42.2122454f.js"><link rel="prefetch" href="/blog/assets/js/43.8bb0a71b.js"><link rel="prefetch" href="/blog/assets/js/44.3e769886.js"><link rel="prefetch" href="/blog/assets/js/5.2cc523f9.js"><link rel="prefetch" href="/blog/assets/js/6.86e346f0.js"><link rel="prefetch" href="/blog/assets/js/7.d17b9335.js"><link rel="prefetch" href="/blog/assets/js/8.b2177cb3.js"><link rel="prefetch" href="/blog/assets/js/9.a8aca7d1.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.45e5a3ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">前端开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link router-link-active">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link router-link-exact-active router-link-active">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link router-link-active">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link router-link-exact-active router-link-active">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>mongoose</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/mongoDB/learning/mongoose.html#介绍" class="sidebar-link">介绍</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#安装以及crud" class="sidebar-link">安装以及CRUD</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_1-安装" class="sidebar-link">1.安装</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_2-引入-mongoose-并连接数据库" class="sidebar-link">2. 引入 mongoose  并连接数据库</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_3-定义-schema" class="sidebar-link">3.定义 Schema</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_4-创建数据模型" class="sidebar-link">4.创建数据模型</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_5-查找数据" class="sidebar-link">5.查找数据</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_6-增加数据" class="sidebar-link">6.增加数据</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_7-更新数据" class="sidebar-link">7.更新数据</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#_8-删除数据" class="sidebar-link">8.删除数据</a></li></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#模式修饰符" class="sidebar-link">模式修饰符</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#预定义模式修饰符" class="sidebar-link">预定义模式修饰符</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#getters和setters自定义修饰符" class="sidebar-link">Getters和Setters自定义修饰符</a></li></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#mongoose-索引" class="sidebar-link">Mongoose 索引</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#mongoose-内置-curd" class="sidebar-link">Mongoose  内置 CURD</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#扩展-mongoose-curd" class="sidebar-link">扩展 Mongoose CURD</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#mongoose-校验参数" class="sidebar-link">Mongoose  校验参数</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#aggregate-聚合查询" class="sidebar-link">aggregate  聚合查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#构建数据" class="sidebar-link">构建数据</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#创建模型" class="sidebar-link">创建模型</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#聚合查询" class="sidebar-link">聚合查询</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#多表关联查询" class="sidebar-link">多表关联查询</a></li></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#populate-关联查询" class="sidebar-link">populate  关联查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#定义-ref" class="sidebar-link">定义 ref</a></li><li class="sidebar-sub-header"><a href="/blog/mongoDB/learning/mongoose.html#关联查询" class="sidebar-link">关联查询</a></li></ul></li><li><a href="/blog/mongoDB/learning/mongoose.html#模糊查询" class="sidebar-link">模糊查询</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mongoose"><a href="#mongoose" aria-hidden="true" class="header-anchor">#</a> mongoose</h1> <h2 id="介绍"><a href="#介绍" aria-hidden="true" class="header-anchor">#</a> 介绍</h2> <p>Mongoose 是在 node.js 异步环境下对 mongodb 进行便捷操作的对象模型工具。Mongoose
+是 NodeJS 的驱动，不能作为其他语言的驱动。</p> <p><a href="http://www.mongoosejs.net/docs/schematypes.html" target="_blank" rel="noopener noreferrer">中文文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://mongoosejs.com/docs/api.html" target="_blank" rel="noopener noreferrer">英文文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><strong>Mongoose  有两个特点</strong></p> <ol><li>通过关系型数据库的思想来设计非关系型数据库</li> <li>基于 mongodb 驱动，简化操作</li></ol> <h2 id="安装以及crud"><a href="#安装以及crud" aria-hidden="true" class="header-anchor">#</a> 安装以及CRUD</h2> <p>官网：https://mongoosejs.com/</p> <h3 id="_1-安装"><a href="#_1-安装" aria-hidden="true" class="header-anchor">#</a> 1.安装</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i mongoose --save
+</code></pre></div><h3 id="_2-引入-mongoose-并连接数据库"><a href="#_2-引入-mongoose-并连接数据库" aria-hidden="true" class="header-anchor">#</a> 2. 引入 mongoose  并连接数据库</h3> <p>先给数据库创建账户密码</p> <div class="language- extra-class"><pre class="language-text"><code>db.createUser({user: &quot;imocc&quot;,pwd: &quot;123456&quot;,roles: [ { role: &quot;dbOwner&quot;, db: &quot;student&quot; } ]})
+</code></pre></div><p>引入链接mongoose</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">'mongodb://localhost/imocc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 如果有账户密码需要采用下面的连接方式：</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">'mongodb://admin:123456@localhost:27017/admin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 新版需要加配置项</span>
+<span class="token keyword">const</span> connect <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span>
+  <span class="token string">'mongodb://admin:123456@localhost:27017/admin'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> 
+      useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+      useNewUrlParser<span class="token punctuation">:</span> <span class="token boolean">true</span> 
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="_3-定义-schema"><a href="#_3-定义-schema" aria-hidden="true" class="header-anchor">#</a> 3.定义 Schema</h3> <p>数据库中的 Schema，为数据库对象的集合。schema 是 mongoose 里会用到的一种数据模式，
+可以理解为表结构的定义；每个 schema 会映射到 mongodb 中的一个 collection，它不具备
+操作数据库的能力</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> userSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	name<span class="token punctuation">:</span>string<span class="token punctuation">,</span>
+	age<span class="token punctuation">:</span>number<span class="token punctuation">,</span>
+	desc<span class="token punctuation">:</span>string
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_4-创建数据模型"><a href="#_4-创建数据模型" aria-hidden="true" class="header-anchor">#</a> 4.创建数据模型</h3> <p>定义好了 Schema，接下就是生成 Model。model 是由 schema 生成的模型，可以对数据库的操作。
+注意：mongoose.model 里面可以传入两个参数也可以传入三个参数：</p> <p>mongoose.model（参数 1:模型名称（首字母大写），参数 2:Schema）</p> <p>mongoose.model（参数 1:模型名称（首字母大写），参数 2:Schema，参数 3:数据库集合名称）</p> <p>如果传入 2  个参数的话:这个模型会和模型名称相同的复数的数据库建立连接：如通过下面
+方法创建模型，那么这个模型将会操作 users 这个集合。</p> <p>如果传入 3  个参数的话:模型默认操作第三个参数定义的集合名称</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> User<span class="token operator">=</span>mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'User'</span><span class="token punctuation">,</span> UserSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_5-查找数据"><a href="#_5-查找数据" aria-hidden="true" class="header-anchor">#</a> 5.查找数据</h3> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'xiaoming'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_6-增加数据"><a href="#_6-增加数据" aria-hidden="true" class="header-anchor">#</a> 6.增加数据</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'xiaolili'</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">22</span><span class="token punctuation">,</span>
+    desc<span class="token punctuation">:</span> <span class="token string">'我是小莉莉'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> data<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_7-更新数据"><a href="#_7-更新数据" aria-hidden="true" class="header-anchor">#</a> 7.更新数据</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">updateOne</span><span class="token punctuation">(</span>
+    <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'xiaolili'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> desc<span class="token punctuation">:</span> <span class="token string">'hi，我是肖丽丽'</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span>
+</code></pre></div><h3 id="_8-删除数据"><a href="#_8-删除数据" aria-hidden="true" class="header-anchor">#</a> 8.删除数据</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">deleteOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'xiaohu'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="模式修饰符"><a href="#模式修饰符" aria-hidden="true" class="header-anchor">#</a> 模式修饰符</h2> <h3 id="预定义模式修饰符"><a href="#预定义模式修饰符" aria-hidden="true" class="header-anchor">#</a> 预定义模式修饰符</h3> <p>mongoose 提供的预定义模式修饰符，可以对我们增加的数据进行一些格式化</p> <p>lowercase、uppercase 、trim</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//给schema增加模式修饰符</span>
+
+<span class="token keyword">const</span> UserSchemal <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    trim<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 去掉前后空格</span>
+    lowercase<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 转为小写</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  status<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 默认值 1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+  sex<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  desc<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// 插入数据</span>
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">' XIAO DU '</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    desc<span class="token punctuation">:</span> <span class="token string">'我是小杜'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> data<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+
+
+<span class="token comment">// 结果</span>
+res<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  status<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  _id<span class="token punctuation">:</span> <span class="token number">5</span>f97b9978b36201d984f35fd<span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span> <span class="token string">'xiao du'</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+  desc<span class="token punctuation">:</span> <span class="token string">'我是小杜'</span><span class="token punctuation">,</span>
+  __v<span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="getters和setters自定义修饰符"><a href="#getters和setters自定义修饰符" aria-hidden="true" class="header-anchor">#</a> Getters和Setters自定义修饰符</h3> <p>除了 mongoose 内置的修饰符以外，我们还可以通过 set（建议使用） 修饰符在增加数据的时候对数据进行格式化。也可以通过 get（不建议使用）在 实例获取数据的时候对数据进行格式化。</p> <div class="language- extra-class"><pre class="language-text"><code>//给schema增加自定义修饰符，给blogUrl增加前缀
+const UserSchemal = mongoose.Schema({
+  name: {
+    type: String,
+    trim: true, // 去掉前后空格
+    lowercase: true, // 转为小写
+  },
+  status: {
+    type: Number,
+    default: 1, // 默认值 1
+  },
+  blogUrl: {
+    type: String,
+    set(url) {
+      if (!url) return
+      let urlReg = /^(http|https)/
+      if (!urlReg.test(url)) {
+        return 'http://' + url
+      }
+      return url
+    },
+    get(url) {
+      if (!url) return
+      let urlReg = /^(http|https)/
+      if (!urlReg.test(url)) {
+        return 'http://' + url
+      }
+      return url
+    },
+  },
+  age: Number,
+  sex: String,
+  desc: String,
+})
+
+// 增加数据
+const data = new User({
+    name: ' XIAO DU2 ',
+    age: 30,
+    desc: '我是小杜2',
+    blogUrl: 'www.baidu.com',
+  })
+  const res = await data.save(data)
+  console.log('res:', res)
+  
+// 结果
+res: {
+  status: 1,
+  _id: 5f97bc17fbcf792058c530a2,
+  name: 'xiao du2',
+  age: 30,
+  desc: '我是小杜2',
+  blogUrl: 'http://www.baidu.com',
+  __v: 0
+}
+</code></pre></div><h2 id="mongoose-索引"><a href="#mongoose-索引" aria-hidden="true" class="header-anchor">#</a> Mongoose 索引</h2> <p>索引是对数据库表中一列或多列的值进行排序的一种结构，可以让我们查询数据库变得更快。MongoDB 的索引几乎与传统的关系型数据库一模一样，这其中也包括一些基本的查询优化技巧。
+mongoose 中除了以前创建索引的方式，我们也可以在定义 Schema 的时候指定创建索引。</p> <p>MongoDB 支持 <a href="http://docs.mongodb.org/manual/indexes/" target="_blank" rel="noopener noreferrer">secondary indexes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. 在 mongoose 中，我们在 <code>Schema</code> 中定义索引。索引分字段级别和schema级别， <a href="https://docs.mongodb.com/manual/core/index-compound/" target="_blank" rel="noopener noreferrer">复合索引<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 需要在 schema 级别定义。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> UserSchemal <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token comment">// 普通索引</span>
+    index<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  status<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 默认值 1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+  sex<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  desc<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// schema级别索引</span>
+UserSchemal<span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>age<span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>索引构建完成或失败后，Mongoose 会触发 <code>index</code> 事件。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> User <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'User'</span><span class="token punctuation">,</span> UserSchemal<span class="token punctuation">,</span> <span class="token string">'user'</span><span class="token punctuation">)</span>
+User<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'err'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="mongoose-内置-curd"><a href="#mongoose-内置-curd" aria-hidden="true" class="header-anchor">#</a> Mongoose  内置 CURD</h2> <ol><li>Model.deleteMany()</li> <li>Model.deleteOne()</li> <li>Model.find()</li> <li>Model.findById()</li> <li>Model.findByIdAndDelete()</li> <li>Model.findByIdAndRemove()</li> <li>Model.findByIdAndUpdate()</li> <li>Model.findOne()</li> <li>Model.findOneAndDelete()</li> <li>Model.findOneAndRemove()</li> <li>Model.findOneAndUpdate()</li> <li>Model.replaceOne()</li> <li>Model.updateMany()</li> <li>Model.updateOne()</li></ol> <h2 id="扩展-mongoose-curd"><a href="#扩展-mongoose-curd" aria-hidden="true" class="header-anchor">#</a> 扩展 Mongoose CURD</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 静态方法</span>
+UserSchema<span class="token punctuation">.</span>statics<span class="token punctuation">.</span><span class="token function-variable function">findByUid</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">uid<span class="token punctuation">,</span>cb</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;_id&quot;</span><span class="token punctuation">:</span>uid<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>docs</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">cb</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>docs<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 实例方法</span>
+UserSchema<span class="token punctuation">.</span>methods<span class="token punctuation">.</span><span class="token function-variable function">print</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这是一个实例方法'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="mongoose-校验参数"><a href="#mongoose-校验参数" aria-hidden="true" class="header-anchor">#</a> Mongoose  校验参数</h2> <ul><li>required : 表示这个数据必须传入</li> <li>max: 用于 Number 类型数据，最大值</li> <li>min: 用于 Number 类型数据，最小值</li> <li>enum:枚举类型，要求数据必须满足枚举值 enum: ['0', '1', '2']</li> <li>match:增加的数据必须符合 match（正则）的规则</li> <li>maxlength：最大值</li> <li>minlength：最小值</li> <li>validate 自定义校验器</li> <li>select：查询是否显示字段</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> UserSchema <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">mongoose<span class="token punctuation">.</span>Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span>String<span class="token punctuation">,</span>
+        required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    password<span class="token punctuation">:</span><span class="token punctuation">{</span>
+      	type<span class="token punctuation">:</span>String<span class="token punctuation">,</span>
+        select<span class="token punctuation">:</span><span class="token boolean">false</span>	<span class="token comment">// 查询不显示密码</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+        <span class="token comment">// 是否必须的校验器</span>
+        required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 数字类型的最大值校验器</span>
+        max<span class="token punctuation">:</span> <span class="token number">120</span><span class="token punctuation">,</span>
+        <span class="token comment">// 数字类型的最小值校验器</span>
+        min<span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    status<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        <span class="token comment">// 设置字符串的可选值</span>
+        <span class="token keyword">enum</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'0'</span><span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    phone<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span>Number<span class="token punctuation">,</span>
+        match<span class="token punctuation">:</span> <span class="token regex">/^\d{11}$/</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    desc<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+        <span class="token comment">// 自定义的验证器，如果通过验证返回 true，没有通过则返回 false</span>
+        <span class="token function-variable function">validate</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">desc</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       		 <span class="token keyword">return</span> desc<span class="token punctuation">.</span>length <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="aggregate-聚合查询"><a href="#aggregate-聚合查询" aria-hidden="true" class="header-anchor">#</a> aggregate  聚合查询</h2> <h3 id="构建数据"><a href="#构建数据" aria-hidden="true" class="header-anchor">#</a> 构建数据</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>db.order.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;1&quot;</span>,<span class="token string">&quot;uid&quot;</span>:10,<span class="token string">&quot;trade_no&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;111&quot;</span>,<span class="token string">&quot;all_price&quot;</span>:100,<span class="token string">&quot;all_num&quot;</span>:2<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;2&quot;</span>,<span class="token string">&quot;uid&quot;</span>:7,<span class="token string">&quot;trade_no&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;222&quot;</span>,<span class="token string">&quot;all_price&quot;</span>:90,<span class="token string">&quot;all_num&quot;</span>:2<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;3&quot;</span>,<span class="token string">&quot;uid&quot;</span>:9,<span class="token string">&quot;trade_no&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;333&quot;</span>,<span class="token string">&quot;all_price&quot;</span>:20,<span class="token string">&quot;all_num&quot;</span>:6<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;1&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;商品鼠标 1&quot;</span>,<span class="token string">&quot;price&quot;</span>:50,num:1<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;1&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;商品键盘 2&quot;</span>,<span class="token string">&quot;price&quot;</span>:50,num:1<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;1&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;商品键盘 3&quot;</span>,<span class="token string">&quot;price&quot;</span>:0,num:1<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;2&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;牛奶&quot;</span>,<span class="token string">&quot;price&quot;</span>:50,num:1<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;2&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;酸奶&quot;</span>,<span class="token string">&quot;price&quot;</span>:40,num:1<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;3&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;矿泉水&quot;</span>,<span class="token string">&quot;price&quot;</span>:2,num:5<span class="token punctuation">}</span><span class="token punctuation">)</span>
+db.order_item.insert<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;order_id&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;3&quot;</span>,<span class="token string">&quot;title&quot;</span><span class="token builtin class-name">:</span><span class="token string">&quot;毛巾&quot;</span>,<span class="token string">&quot;price&quot;</span>:10,num:1<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="创建模型"><a href="#创建模型" aria-hidden="true" class="header-anchor">#</a> 创建模型</h3> <p><strong>order模型</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../config/dbHelp'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> OrderSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  order_id<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  uid<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+  trade_no<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  all_price<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+  all_num<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'Order'</span><span class="token punctuation">,</span> OrderSchema<span class="token punctuation">,</span> <span class="token string">'order'</span><span class="token punctuation">)</span>
+
+</code></pre></div><p><strong>order-item模型</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> mongoose <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../config/dbHelp'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> OrderItemSchema <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  order_id<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  title<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+  price<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+  num<span class="token punctuation">:</span> Number<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token string">'OrderItem'</span><span class="token punctuation">,</span> OrderItemSchema<span class="token punctuation">,</span> <span class="token string">'order_item'</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="聚合查询"><a href="#聚合查询" aria-hidden="true" class="header-anchor">#</a> 聚合查询</h3> <div class="language- extra-class"><pre class="language-text"><code>
+async function order(ctx) {
+  let data = await Order.aggregate([
+    {
+      $lookup: {
+        from: 'order_item', //关联表
+        localField: 'order_id',
+        foreignField: 'order_id',// 外键
+        as: 'items',
+      },
+    },
+    {
+      $match: { all_price: { $gte: 20 } },
+    },
+  ])
+  ctx.body = {
+    code: 200,
+    data,
+  }
+}
+</code></pre></div><h3 id="多表关联查询"><a href="#多表关联查询" aria-hidden="true" class="header-anchor">#</a> 多表关联查询</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>ArticleModel<span class="token punctuation">.</span><span class="token function">aggregate</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+
+    $lookup<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword">from</span><span class="token punctuation">:</span> <span class="token string">&quot;articlecate&quot;</span><span class="token punctuation">,</span>
+      localField<span class="token punctuation">:</span> <span class="token string">&quot;cid&quot;</span><span class="token punctuation">,</span>
+      foreignField<span class="token punctuation">:</span> <span class="token string">&quot;_id&quot;</span><span class="token punctuation">,</span>
+      <span class="token keyword">as</span><span class="token punctuation">:</span> <span class="token string">&quot;cate&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+
+    $lookup<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword">from</span><span class="token punctuation">:</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">,</span>
+      localField<span class="token punctuation">:</span> <span class="token string">&quot;author_id&quot;</span><span class="token punctuation">,</span>
+      foreignField<span class="token punctuation">:</span> <span class="token string">&quot;_id&quot;</span><span class="token punctuation">,</span>
+      <span class="token keyword">as</span><span class="token punctuation">:</span> <span class="token string">&quot;user&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>docs</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>docs<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><img src="/blog/assets/img/11.2a161391.jpg" alt="表"></p> <h2 id="populate-关联查询"><a href="#populate-关联查询" aria-hidden="true" class="header-anchor">#</a> populate  关联查询</h2> <h3 id="定义-ref"><a href="#定义-ref" aria-hidden="true" class="header-anchor">#</a> 定义 ref</h3> <div class="language- extra-class"><pre class="language-text"><code>var ArticleSchema = new Schema({
+    title:{
+    	type: String, unique: true
+    },
+    /*分类 id*/
+    cid : {
+    	type: Schema.Types.ObjectId,
+    	ref:'ArticleCate' //model 的名称
+    }, 
+    /*用户的 id*/
+    author_id:{
+    	type: Schema.Types.ObjectId,
+    	ref:'User'
+    }, 
+    author_name:{
+         type:String
+    },
+    descripton:String,
+    content : String
+});
+</code></pre></div><h3 id="关联查询"><a href="#关联查询" aria-hidden="true" class="header-anchor">#</a> 关联查询</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>ArticleModel<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">populate</span><span class="token punctuation">(</span><span class="token string">'cid'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">populate</span><span class="token punctuation">(</span><span class="token string">'author_id'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>docs</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>docs<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="模糊查询"><a href="#模糊查询" aria-hidden="true" class="header-anchor">#</a> 模糊查询</h2> <div class="language- extra-class"><pre class="language-text"><code>// 获取query的title值
+const reg = new RegExp(ctx.request.query.title, 'i')
+// 通过$regex进行模糊查询
+ArticleModel.find({title:{$regex:reg}})
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/19/2020, 9:56:29 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.ee223f02.js" defer></script><script src="/blog/assets/js/2.f364336e.js" defer></script><script src="/blog/assets/js/13.71ffc42f.js" defer></script>
+  </body>
+</html>

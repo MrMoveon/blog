@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>自定义工具函数库 | 前端开发笔记</title>
+    <meta name="description" content="前端开发笔记">
+    <link rel="icon" href="/blog/icon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.45e5a3ae.css" as="style"><link rel="preload" href="/blog/assets/js/app.ee223f02.js" as="script"><link rel="preload" href="/blog/assets/js/2.f364336e.js" as="script"><link rel="preload" href="/blog/assets/js/38.9d939308.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.60d9a5c4.js"><link rel="prefetch" href="/blog/assets/js/11.9d12addb.js"><link rel="prefetch" href="/blog/assets/js/12.8ef0bd8a.js"><link rel="prefetch" href="/blog/assets/js/13.71ffc42f.js"><link rel="prefetch" href="/blog/assets/js/14.25b3510a.js"><link rel="prefetch" href="/blog/assets/js/15.c4d91af5.js"><link rel="prefetch" href="/blog/assets/js/16.948c6a33.js"><link rel="prefetch" href="/blog/assets/js/17.0e6c3b39.js"><link rel="prefetch" href="/blog/assets/js/18.5f7af77b.js"><link rel="prefetch" href="/blog/assets/js/19.3d23eaff.js"><link rel="prefetch" href="/blog/assets/js/20.472050f8.js"><link rel="prefetch" href="/blog/assets/js/21.daaff1eb.js"><link rel="prefetch" href="/blog/assets/js/22.ae3ff2ee.js"><link rel="prefetch" href="/blog/assets/js/23.06d58a4e.js"><link rel="prefetch" href="/blog/assets/js/24.8df026f6.js"><link rel="prefetch" href="/blog/assets/js/25.8fa3c5ac.js"><link rel="prefetch" href="/blog/assets/js/26.b9e79cc9.js"><link rel="prefetch" href="/blog/assets/js/27.0c29d378.js"><link rel="prefetch" href="/blog/assets/js/28.5c6b388b.js"><link rel="prefetch" href="/blog/assets/js/29.a0f69e48.js"><link rel="prefetch" href="/blog/assets/js/3.641e1028.js"><link rel="prefetch" href="/blog/assets/js/30.dc7fbcb3.js"><link rel="prefetch" href="/blog/assets/js/31.a0f54c32.js"><link rel="prefetch" href="/blog/assets/js/32.06b2a848.js"><link rel="prefetch" href="/blog/assets/js/33.1707ffb1.js"><link rel="prefetch" href="/blog/assets/js/34.4a894dbb.js"><link rel="prefetch" href="/blog/assets/js/35.380e3cca.js"><link rel="prefetch" href="/blog/assets/js/36.cbda8a08.js"><link rel="prefetch" href="/blog/assets/js/37.a4ee9d32.js"><link rel="prefetch" href="/blog/assets/js/39.0db069f8.js"><link rel="prefetch" href="/blog/assets/js/4.dd025489.js"><link rel="prefetch" href="/blog/assets/js/40.7207834f.js"><link rel="prefetch" href="/blog/assets/js/41.a0452c50.js"><link rel="prefetch" href="/blog/assets/js/42.2122454f.js"><link rel="prefetch" href="/blog/assets/js/43.8bb0a71b.js"><link rel="prefetch" href="/blog/assets/js/44.3e769886.js"><link rel="prefetch" href="/blog/assets/js/5.2cc523f9.js"><link rel="prefetch" href="/blog/assets/js/6.86e346f0.js"><link rel="prefetch" href="/blog/assets/js/7.d17b9335.js"><link rel="prefetch" href="/blog/assets/js/8.b2177cb3.js"><link rel="prefetch" href="/blog/assets/js/9.a8aca7d1.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.45e5a3ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">前端开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link router-link-exact-active router-link-active">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link router-link-active">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link router-link-exact-active router-link-active">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link router-link-active">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>自定义工具函数库</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/tools/dd-utils.html#_1-创建工具函数库项目" class="sidebar-link">1. 创建工具函数库项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-1-创建项目" class="sidebar-link">1.1 创建项目</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-2-rollup安装" class="sidebar-link">1.2 rollup安装</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-3-安装插件" class="sidebar-link">1.3 安装插件</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-4-配置babel" class="sidebar-link">1.4 配置babel</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-5-配置rollup" class="sidebar-link">1.5 配置rollup</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-6-入口文件暴露功能" class="sidebar-link">1.6 入口文件暴露功能</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-7-package-json设置" class="sidebar-link">1.7 package.json设置</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-8-对项目进行打包" class="sidebar-link">1.8 对项目进行打包</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-9-测试使用自定义包" class="sidebar-link">1.9 测试使用自定义包</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_1-10-npm发布" class="sidebar-link">1.10 npm发布</a></li></ul></li><li><a href="/blog/tools/dd-utils.html#_2-方法的各种定义" class="sidebar-link">2. 方法的各种定义</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_2-1-函数" class="sidebar-link">2.1 函数</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_2-2-数组" class="sidebar-link">2.2 数组</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_2-3-对象" class="sidebar-link">2.3 对象</a></li></ul></li><li><a href="/blog/tools/dd-utils.html#_3-commitizen-规范git提交" class="sidebar-link">3. commitizen 规范git提交</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_3-1-配置" class="sidebar-link">3.1 配置</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_3-2-使用" class="sidebar-link">3.2 使用</a></li></ul></li><li><a href="/blog/tools/dd-utils.html#_4-jest代码测试" class="sidebar-link">4. jest代码测试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-1-使用-npm-安装：" class="sidebar-link">4.1 使用 npm 安装：</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-2-使用babel" class="sidebar-link">4.2 使用babel</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-3-jest-初始化配置" class="sidebar-link">4.3 jest 初始化配置</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-4-测试用例" class="sidebar-link">4.4 测试用例</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-5-测试覆盖率" class="sidebar-link">4.5 测试覆盖率</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-5-开启自动测试" class="sidebar-link">4.5 开启自动测试</a></li><li class="sidebar-sub-header"><a href="/blog/tools/dd-utils.html#_4-6-jest中的匹配器" class="sidebar-link">4.6 jest中的匹配器</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="自定义工具函数库"><a href="#自定义工具函数库" aria-hidden="true" class="header-anchor">#</a> 自定义工具函数库</h1> <h2 id="_1-创建工具函数库项目"><a href="#_1-创建工具函数库项目" aria-hidden="true" class="header-anchor">#</a> 1. 创建工具函数库项目</h2> <h3 id="_1-1-创建项目"><a href="#_1-1-创建项目" aria-hidden="true" class="header-anchor">#</a> 1.1 创建项目</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 创建文件夹</span>
+<span class="token function">mkdir</span> dd-utils
+<span class="token comment"># 进入文件夹</span>
+<span class="token builtin class-name">cd</span> dd-utils
+
+<span class="token comment"># 初始化npm</span>
+<span class="token function">npm</span> init
+
+</code></pre></div><h3 id="_1-2-rollup安装"><a href="#_1-2-rollup安装" aria-hidden="true" class="header-anchor">#</a> 1.2 rollup安装</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 全局安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g rollup
+
+<span class="token comment"># 项目安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> rollup -D
+</code></pre></div><h3 id="_1-3-安装插件"><a href="#_1-3-安装插件" aria-hidden="true" class="header-anchor">#</a> 1.3 安装插件</h3> <table><thead><tr><th>名称</th> <th>说明</th> <th>地址</th></tr></thead> <tbody><tr><td>@rollup/plugin-json</td> <td>它将.json文件转换为ES6模块。</td> <td><a href="https://www.npmjs.com/package/@rollup/plugin-json" target="_blank" rel="noopener noreferrer">npm地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td></tr> <tr><td>@rollup/plugin-babel</td> <td>用于Rollup和Babel之间的无缝集成。</td> <td><a href="https://www.npmjs.com/package/@rollup/plugin-babel" target="_blank" rel="noopener noreferrer">npm地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td></tr> <tr><td>rollup-plugin-terser</td> <td>减少生成的es包。</td> <td><a href="https://www.npmjs.com/package/rollup-plugin-terser" target="_blank" rel="noopener noreferrer">npm地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td></tr> <tr><td>@babel/core</td> <td>babel核心</td> <td></td></tr> <tr><td>@babel/preset-env</td> <td>babel预设</td> <td></td></tr></tbody></table> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> --save-dev @rollup/plugin-json
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev @rollup/plugin-babel
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev rollup-plugin-terser
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev @babel/core
+<span class="token function">npm</span> <span class="token function">install</span> --save-dev @babel/preset-env
+</code></pre></div><h3 id="_1-4-配置babel"><a href="#_1-4-配置babel" aria-hidden="true" class="header-anchor">#</a> 1.4 配置babel</h3> <p>babel插件需要在根目录创建<code>babel.config.js</code>,并设置预设</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  presets<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&quot;@babel/preset-env&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>@babel/preset-env 是一个智能预设，允许你使用最新的JavaScript，而不需要微管理目标环境需要哪些语法转换(以及可选的浏览器填充符)。这既使您的工作更容易，也使JavaScript包更小</p></blockquote> <h3 id="_1-5-配置rollup"><a href="#_1-5-配置rollup" aria-hidden="true" class="header-anchor">#</a> 1.5 配置rollup</h3> <p><code>rollup.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// json插件，将.json文件转换为ES6模块。</span>
+<span class="token keyword">import</span> json <span class="token keyword">from</span> <span class="token string">&quot;@rollup/plugin-json&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 压缩插件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> terser <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;rollup-plugin-terser&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// js babel转换</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> babel <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@rollup/plugin-babel&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 生成文件名</span>
+<span class="token keyword">const</span> fileName <span class="token operator">=</span> <span class="token string">&quot;ddutils&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 路径转换</span>
+<span class="token keyword">function</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 入口文件</span>
+  input<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;src/index.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">// 输出配置，打包多种格式</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token string">&quot;DD&quot;</span><span class="token punctuation">,</span>
+      file<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;dist&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.js</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&quot;umd&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token string">&quot;DD&quot;</span><span class="token punctuation">,</span>
+      file<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;dist&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.min.js</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&quot;umd&quot;</span><span class="token punctuation">,</span>
+      plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">terser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token string">&quot;DD&quot;</span><span class="token punctuation">,</span>
+      file<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;dist&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.esm.js</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&quot;esm&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> <span class="token string">&quot;DD&quot;</span><span class="token punctuation">,</span>
+      file<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;dist&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.esm.min.js</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token string">&quot;esm&quot;</span><span class="token punctuation">,</span>
+      plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token function">terser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// 插件</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">babel</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      babelHelpers<span class="token punctuation">:</span> <span class="token string">&quot;bundled&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 最终打包包含这些helper(最多一个副本)。尤其在打包代码时非常有用。</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_1-6-入口文件暴露功能"><a href="#_1-6-入口文件暴露功能" aria-hidden="true" class="header-anchor">#</a> 1.6 入口文件暴露功能</h3> <p>将所有的方法，导入到文件index，并导出</p> <p><code>src/index.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 通过@rollup/plugin-json插件导入package.json，获取版本号</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> version <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../package.json&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> _version <span class="token operator">=</span> version<span class="token punctuation">;</span>
+<span class="token comment">// function</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> apply <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./function/apply&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> bind <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./function/bind&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> call <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./function/call&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> debounce <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./function/debounce&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> throttle <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./function/throttle&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// array</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> unique1<span class="token punctuation">,</span> unique2<span class="token punctuation">,</span> unique3 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/unique&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> chunk <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/chunk&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> concat <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/concat&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> every <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/every&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> filter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/filter&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> find <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/find&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> findIndex <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/findIndex&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> flatten1<span class="token punctuation">,</span> flatten2 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/flatten&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> map <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/map&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> reduce <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/reduce&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> slice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/slice&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> some <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/some&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> difference <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/difference&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> pull<span class="token punctuation">,</span> pullAll <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/pull&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> drop<span class="token punctuation">,</span> dropRight <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./array/drop&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// object</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> create <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./object/create&quot;</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_1-7-package-json设置"><a href="#_1-7-package-json设置" aria-hidden="true" class="header-anchor">#</a> 1.7 package.json设置</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dd-utlis&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dist/ddutils.min.js&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 指向打包后的文件</span>
+    <span class="token property">&quot;files&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;dist&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;src&quot;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;rollup -c&quot;</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>name：包名（npm仓库中没有同名的名字）</p> <p>version：每次打包上传需要修改版本号</p> <p>main：指向打包后的文件</p> <p>files：发布的时候会将files里的文件夹进行上传</p></blockquote> <h3 id="_1-8-对项目进行打包"><a href="#_1-8-对项目进行打包" aria-hidden="true" class="header-anchor">#</a> 1.8 对项目进行打包</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> run build
+</code></pre></div><h3 id="_1-9-测试使用自定义包"><a href="#_1-9-测试使用自定义包" aria-hidden="true" class="header-anchor">#</a> 1.9 测试使用自定义包</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>../dist/ddutils.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    ddutils<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> item<span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment">// =&gt; [10, 20, 30]</span>
+    ddutils<span class="token punctuation">.</span>version <span class="token comment">// =&gt;0.0.1</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_1-10-npm发布"><a href="#_1-10-npm发布" aria-hidden="true" class="header-anchor">#</a> 1.10 npm发布</h3> <p><strong>执行</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm publish
+</code></pre></div><p><strong>如果发布失败，提示源不对，先切换到官方源</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npmjs.org/
+<span class="token comment"># 如果安装了nrm，使用nrm切换到npm源 </span>
+nrm use <span class="token function">npm</span>
+</code></pre></div><p><strong>如果提示 401 unauthorized</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token number">401</span> Unauthorized - PUT https://registry.npm.taobao.org/dd-utlis - <span class="token punctuation">[</span>unauthorized<span class="token punctuation">]</span> Login first
+</code></pre></div><p><strong>我们先登录下,再进行发布</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 登录</span>
+<span class="token function">npm</span> login
+
+<span class="token comment"># 用户名</span>
+Username: 
+<span class="token comment"># 密码</span>
+Password:
+<span class="token comment"># 邮箱</span>
+email:
+
+<span class="token comment"># 登录成功后，输出</span>
+Logged <span class="token keyword">in</span> as <span class="token punctuation">[</span>username<span class="token punctuation">]</span> on https://registry.npmjs.org/.
+
+
+<span class="token comment"># 发布</span>
+<span class="token function">npm</span> publish
+
+<span class="token comment"># 发布成功</span>
+<span class="token function">npm</span> notice 
+<span class="token function">npm</span> notice package: dd-utlis@0.0.1
+<span class="token function">npm</span> notice <span class="token operator">==</span><span class="token operator">=</span> Tarball Contents <span class="token operator">==</span><span class="token operator">=</span>
+<span class="token function">npm</span> notice <span class="token number">1</span>.1kB  LICENSE
+<span class="token function">npm</span> notice 480B   src/function/apply.js      
+<span class="token function">npm</span> notice 301B   src/function/bind.js
+<span class="token function">npm</span> notice 215B   src/function/call.js
+<span class="token function">npm</span> notice 514B   src/array/chunk.js
+<span class="token function">npm</span> notice 483B   src/array/concat.js        
+<span class="token function">npm</span> notice <span class="token number">3</span>.3kB  dist/ddutils.esm.min.js
+<span class="token function">npm</span> notice <span class="token number">3</span>.5kB  dist/ddutils.min.js
+<span class="token function">npm</span> notice 381B   src/function/throttle.js   
+<span class="token function">npm</span> notice <span class="token number">1</span>.2kB  src/array/unique.js        
+<span class="token function">npm</span> notice 970B   package.json
+<span class="token function">npm</span> notice <span class="token number">15</span>.5kB dist/ddutils.esm.min.js.map
+<span class="token function">npm</span> notice <span class="token number">15</span>.4kB dist/ddutils.min.js.map    
+<span class="token function">npm</span> notice 859B   README.en.md
+<span class="token function">npm</span> notice 949B   README.md
+<span class="token function">npm</span> notice <span class="token operator">==</span><span class="token operator">=</span> Tarball Details <span class="token operator">==</span><span class="token operator">=</span>
+<span class="token function">npm</span> notice name:          dd-utlis
+<span class="token function">npm</span> notice version:       <span class="token number">0.0</span>.1
+<span class="token function">npm</span> notice package size:  <span class="token number">11.0</span> kB
+<span class="token function">npm</span> notice unpacked size: <span class="token number">52.2</span> kB
+<span class="token function">npm</span> notice shasum:        eaf387395861021f0cf4fbf751ba299b2c73b75e
+<span class="token function">npm</span> notice integrity:     sha512-HisCBo5V6H+vA<span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span>Jw04BV8WGniZg<span class="token operator">==</span>
+<span class="token function">npm</span> notice total files:   <span class="token number">26</span>
+<span class="token function">npm</span> notice
++ dd-utlis@0.0.1
+</code></pre></div><p><strong>如果git仓库提示</strong></p> <div class="language- extra-class"><pre class="language-text"><code>We found a potential security vulnerability in one of your dependencies
+</code></pre></div><p>我们需要在 <code>.gitignore</code> 中添加忽略文件 <code>package-lock.json</code></p> <div class="language-sh extra-class"><pre class="language-sh"><code>node_modules
+package-lock.json
+</code></pre></div><h2 id="_2-方法的各种定义"><a href="#_2-方法的各种定义" aria-hidden="true" class="header-anchor">#</a> 2. 方法的各种定义</h2> <h3 id="_2-1-函数"><a href="#_2-1-函数" aria-hidden="true" class="header-anchor">#</a> 2.1 函数</h3> <h4 id="call"><a href="#call" aria-hidden="true" class="header-anchor">#</a> call</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span>ctx<span class="token punctuation">,</span><span class="token operator">...</span>args</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 如果指向的对象为undefined/null</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ctx<span class="token operator">===</span><span class="token keyword">undefined</span> <span class="token operator">||</span> ctx <span class="token operator">===</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 那么就等于全局对象</span>
+        ctx <span class="token operator">=</span> globalThis
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 给ctx添加一个临时方法 指向fn</span>
+    ctx<span class="token punctuation">.</span>_temp <span class="token operator">=</span> fn
+    <span class="token comment">// 执行临时方法，并传入参数</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">_temp</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+    <span class="token comment">// 删除临时方法</span>
+    <span class="token keyword">delete</span> ctx<span class="token punctuation">.</span>_temp
+    <span class="token comment">// 返回结果</span>
+    <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="apply"><a href="#apply" aria-hidden="true" class="header-anchor">#</a> apply</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">apply</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 如果ctx为undefined/null,this指向window</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>ctx <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">||</span> ctx <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx <span class="token operator">=</span> window<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 给ctx添加一个临时方法，方法指向fn</span>
+  ctx<span class="token punctuation">.</span>_temp <span class="token operator">=</span> fn<span class="token punctuation">;</span>
+  <span class="token comment">// 通过ctx来执行这个方法，也就会执行fn函数，此时fn中的this肯定指向ctx</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">_temp</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 删除ctx中的临时函数</span>
+  <span class="token keyword">delete</span> ctx<span class="token punctuation">.</span>_temp<span class="token punctuation">;</span>
+  <span class="token comment">// 返回fn的执行结果</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="bind"><a href="#bind" aria-hidden="true" class="header-anchor">#</a> bind</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> call <span class="token keyword">from</span> <span class="token string">&quot;./call&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">bind</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> ctx</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// bind返回的是一个新函数</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取参数</span>
+    <span class="token keyword">var</span> args <span class="token operator">=</span> arguments<span class="token punctuation">;</span>
+    <span class="token comment">// 通过call调用原函数，并指定this为ctx,然后传递参数</span>
+    <span class="token keyword">return</span> <span class="token function">call</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="debounce"><a href="#debounce" aria-hidden="true" class="header-anchor">#</a> debounce</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 函数防抖
+ * @description 创建一个防抖动函数，该函数会在用户停止触发后，延迟 `wait` 毫秒后执行 `fn`
+ * @param {*} fn 函数
+ * @param {*} wait 等待执行时间
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 用来保存定时器的标识id</span>
+  <span class="token keyword">var</span> timerId <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token comment">// 返回一个事件监听函数，也就是防抖函数</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> ctx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token comment">// 清除未执行的定时器任务</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>timerId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 处理延迟wait时间后执行定时器任务</span>
+    timerId <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 调用fn处理事件</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 执行后，清空标识id</span>
+      timerId <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="throttle"><a href="#throttle" aria-hidden="true" class="header-anchor">#</a> throttle</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 节流函数
+ * @description 创建一个节流函数，每隔delay时间执行一次fn
+ * @param {*} fn 函数
+ * @param {*} delay 多少时间执行一次
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> prev <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> now <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> prev <span class="token operator">&gt;</span> delay<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      prev <span class="token operator">=</span> now<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="_2-2-数组"><a href="#_2-2-数组" aria-hidden="true" class="header-anchor">#</a> 2.2 数组</h3> <h4 id="map"><a href="#map" aria-hidden="true" class="header-anchor">#</a> map</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description 创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值
+ * @param {*} array
+ * @param {*} callback
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">callback</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="filter"><a href="#filter" aria-hidden="true" class="header-anchor">#</a> filter</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description filter()方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
+ * @param {*} array
+ * @param {*} callback [element,[,index]]
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">callback</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="reduce"><a href="#reduce" aria-hidden="true" class="header-anchor">#</a> reduce</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description reduce方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
+ * @param {*} array
+ * @param {*} callback 接受四个参数[accumulator,currentValue,currentIndex]
+ * @param {*} initValue
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">reduce</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback<span class="token punctuation">,</span> initValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>array<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;Reduce of empty array with no initial value&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> initValue <span class="token operator">||</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result <span class="token operator">=</span> <span class="token function">callback</span><span class="token punctuation">(</span>result<span class="token punctuation">,</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="find"><a href="#find" aria-hidden="true" class="header-anchor">#</a> find</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description  find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
+ * @param {*} array
+ * @param {*} callback
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">callback</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="findindex"><a href="#findindex" aria-hidden="true" class="header-anchor">#</a> findIndex</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。若没有找到对应元素则返回-1。
+ * @param {*} array
+ * @param {*} callback
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">callback</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="every"><a href="#every" aria-hidden="true" class="header-anchor">#</a> every</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description every() 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。
+ * @param {*} array
+ * @param {*} callback
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">every</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">callback</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="some"><a href="#some" aria-hidden="true" class="header-anchor">#</a> some</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description some() 方法测试数组中是不是至少有1个元素通过了被提供的函数测试。它返回的是一个Boolean类型的值。
+ * @param {*} array
+ * @param {*} callback
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">some</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">callback</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="slice"><a href="#slice" aria-hidden="true" class="header-anchor">#</a> slice</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description slice() 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括end）。原始数组不会被改变。
+ * @param {*} array
+ * @param {*} begin 提取起始处的索引
+ * @param {*} end 提取终止处的索引
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">slice</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> begin<span class="token punctuation">,</span> end</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// 如果省略 begin，则 从索引 0 开始</span>
+  begin <span class="token operator">=</span> begin <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token comment">// 如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>begin <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    begin <span class="token operator">=</span> array<span class="token punctuation">.</span>length <span class="token operator">+</span> begin<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 如果 end 被省略，就等于数组的长度</span>
+  end <span class="token operator">=</span> end <span class="token operator">||</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token comment">// 如果 begin 超出原数组的索引范围，则会返回空数组</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>begin <span class="token operator">&gt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 如果 end 大于数组的长度，那么end = 数组长度</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>end <span class="token operator">&gt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    end <span class="token operator">=</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 如果begin比end大返回空数组</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>begin <span class="token operator">&gt;</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> begin<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> end<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// const animals = [&quot;ant&quot;, &quot;bison&quot;, &quot;camel&quot;, &quot;duck&quot;, &quot;elephant&quot;];</span>
+
+<span class="token comment">// console.log(slice(animals, 2));</span>
+<span class="token comment">// console.log(slice(animals, 2, 4));</span>
+<span class="token comment">// console.log(slice(animals, 1, 5));</span>
+<span class="token comment">// console.log(slice(animals, -2, 5));</span>
+<span class="token comment">// console.log(slice(animals, 6));</span>
+<span class="token comment">// console.log(slice(animals, 4, 1));</span>
+
+</code></pre></div><h4 id="concat"><a href="#concat" aria-hidden="true" class="header-anchor">#</a> concat</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description concat()方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组
+ * @param {*} array
+ * @param  {...any} args 多个参数
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> <span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>array<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> args<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> element <span class="token operator">=</span> args<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="chunck"><a href="#chunck" aria-hidden="true" class="header-anchor">#</a> chunck</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description chunck() 数组分块函数，将一个数组分成几块
+ * @param {*} array 数组
+ * @param {*} size 数量
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">chunck</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> size</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> element <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// 获取每一块的key</span>
+    <span class="token keyword">let</span> key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>i <span class="token operator">/</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 如果不存在，</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>element<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="unique"><a href="#unique" aria-hidden="true" class="header-anchor">#</a> unique</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description 通过双层循环去重，性能较差
+ * @param {*} array
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">unique1</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 声明一个新数组</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// 循环数组</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> current <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// 通过indexOf检测当前项是否在result中，不在就插入到result</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @description 通过增加一个对象，进行去重，性能较好
+ * @param {*} array
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">unique2</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 声明一个对象</span>
+  <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 声明一个新数组</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// 循环数组</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 如果对象中没有这个key值，向新数组插入，并给对象添加这个key</span>
+    <span class="token keyword">let</span> key <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @description 通过Set的特性进行去重
+ * @param {*} array
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">unique3</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">...</span>new <span class="token class-name">Set</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  unique1<span class="token punctuation">,</span>
+  unique2<span class="token punctuation">,</span>
+  unique3<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="flatten"><a href="#flatten" aria-hidden="true" class="header-anchor">#</a> flatten</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description flatten1() 数组通过递归进行扁平化
+ * @param {*} array
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">flatten1</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>array<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> element <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result <span class="token operator">=</span> result<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token function">flatten</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      result <span class="token operator">=</span> result<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @description flatten2() 数组通过递归进行扁平化
+ * @param {*} array
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">flatten2</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>array<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// 如果数组中存在数组，就对数组进行合并</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// arr = [1,2,[3,4,[5,6]]</span>
+    <span class="token comment">// arr = [1,2,3,4,[5,6]]</span>
+    <span class="token comment">// arr = [1,2,3,4,5,6]</span>
+    arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  flatten1<span class="token punctuation">,</span>
+  flatten2<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="difference"><a href="#difference" aria-hidden="true" class="header-anchor">#</a> difference</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description difference() 数组差集 创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中
+ * @param {Array} array 要检查的数组
+ * @param {Array} [values] 排除的值
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">difference</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> values</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 如果排除的值values 不存在，返回原数组</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>values <span class="token operator">||</span> <span class="token operator">!</span>values<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span> array<span class="token punctuation">;</span>
+  <span class="token comment">//  数组过滤，如果排除的值不包含当前值 返回当前值</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>values<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">difference</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">difference</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [1,2,4,5]</span>
+
+</code></pre></div><h4 id="pull"><a href="#pull" aria-hidden="true" class="header-anchor">#</a> pull</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description 移除数组array中所有和给定值相等的元素
+ * @param {*} array 要修改的数组
+ * @param  {...any} values 要移除的多个值
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">pull</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> <span class="token operator">...</span>values</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>values<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> array<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>values<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// var array = [1, 2, 3, 1, 2, 3];</span>
+<span class="token comment">// console.log(pull(array)); // [ 1, 2, 3, 1, 2, 3 ]</span>
+<span class="token comment">// console.log(pull(array, 2, 3)); // [1]</span>
+
+<span class="token comment">/**
+ * @description 移除数组array中所有和给定值相等的元素
+ * @param {Array} array 要修改的数组
+ * @param {Array} values 要移除的数组
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">pullAll</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">pull</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token operator">...</span>values<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">pullAll</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [ 1, 2, 3, 1, 2, 3 ]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">pullAll</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [1]</span>
+
+</code></pre></div><h4 id="drop"><a href="#drop" aria-hidden="true" class="header-anchor">#</a> drop</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description drop() 创建一个切片数组，去除array前面的n个元素
+ * @param {Array} array  要查询的数组
+ * @param {Number} [size] 要去除的元素个数
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">drop</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> size <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 通过过滤数组，判断数组的索引大于等于去除元素的个数</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> index <span class="token operator">&gt;=</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">drop</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// =&gt; [2, 3]</span>
+
+<span class="token function">drop</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// =&gt; [3]</span>
+
+
+<span class="token comment">/**
+ * @description dropRight() 创建一个切片数组，去除array尾部的n个元素
+ * @param {Array} array  要查询的数组
+ * @param {Number} [size] 要去除的元素个数
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">dropRight</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> size <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 通过过滤数组，判断数组的索引 &lt; 数组的长度-去除元素的个数</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> index <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length <span class="token operator">-</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">dropRight</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// =&gt; [1, 2]</span>
+
+<span class="token function">dropRight</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// =&gt; [1]</span>
+
+<span class="token function">dropRight</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// =&gt; []</span>
+
+<span class="token function">dropRight</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// =&gt; [1, 2, 3]</span>
+
+</code></pre></div><h3 id="_2-3-对象"><a href="#_2-3-对象" aria-hidden="true" class="header-anchor">#</a> 2.3 对象</h3> <h4 id="create"><a href="#create" aria-hidden="true" class="header-anchor">#</a> create</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @description create() 创建一个继承 prototype 的对象
+ * @param {Function} fn 要继承的对象
+ * @param  {...any} props 待分配的属性
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> <span class="token operator">...</span>props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1.创建一个对象</span>
+  <span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 2.改变this执行</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token operator">...</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 3.修改新对象的原型对象</span>
+  obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> fn<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+  <span class="token comment">// 4.返回新对象</span>
+  <span class="token keyword">return</span> result <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token operator">?</span> result <span class="token punctuation">:</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+
+
+
+
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+  <span class="token comment">//   return [];</span>
+  <span class="token comment">//   return { a: 100 };</span>
+  <span class="token comment">//   return &quot;sdas&quot;;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> lisi <span class="token operator">=</span> <span class="token function">create</span><span class="token punctuation">(</span>Person<span class="token punctuation">,</span> <span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lisi<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// []</span>
+<span class="token comment">// { a: 100 }</span>
+<span class="token comment">// Person { name: '李四', age: 20 }</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>lisi <span class="token keyword">instanceof</span> <span class="token class-name">Person</span><span class="token punctuation">)</span> <span class="token comment">// =&gt;true</span>
+</code></pre></div><h2 id="_3-commitizen-规范git提交"><a href="#_3-commitizen-规范git提交" aria-hidden="true" class="header-anchor">#</a> 3. commitizen 规范git提交</h2> <p><strong>让您的代码提交变得更加友好</strong></p> <h3 id="_3-1-配置"><a href="#_3-1-配置" aria-hidden="true" class="header-anchor">#</a> 3.1 配置</h3> <p>首先，安装commtizen命令行工具: ：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> commitizen -g
+</code></pre></div><p>接下来，初始化你的项目，使用<code>cz-conventional-changelog</code>适配器:</p> <div class="language-sh extra-class"><pre class="language-sh"><code>commitizen init cz-conventional-changelog --save-dev --save-exact
+</code></pre></div><p>上面的命令为您做三件事。
+安装 <code>cz-conventional-changelog</code> 适配器 <code>npm</code> 模块</p> <p>把它保存到包装上。<code>package.json</code> 的依赖项或 <code>devDependencies</code>
+将 <code>config. commtizen</code>键添加到包的根目录。<code>package.json</code> 如下所示:</p> <div class="language-json extra-class"><pre class="language-json"><code>...
+<span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;commitizen&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./node_modules/cz-conventional-changelog&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>另外，<code>commtizen</code> 配置也可以添加到 <code>.czrc</code> 文件中:</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cz-conventional-changelog&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这只是告诉 <code>commiten</code>，当贡献者试图提交到这个 <code>repo</code> 时，我们实际上希望使用哪个适配器。</p> <p>在<code>package.json</code>配置 <code>scripts</code>命令，</p> <div class="language-json extra-class"><pre class="language-json"><code> ...
+ <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;commit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cz&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ...
+</code></pre></div><h3 id="_3-2-使用"><a href="#_3-2-使用" aria-hidden="true" class="header-anchor">#</a> 3.2 使用</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 先添加文件到暂存区</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token comment"># 再运行commtizen</span>
+<span class="token function">git</span> cz
+<span class="token comment"># or</span>
+<span class="token comment"># npm run commit</span>
+</code></pre></div><p>运行<code>commtizen</code>后， 选择要提交的更改类型 ：</p> <p><img src="images/1613981120869.png" alt="1613981120869"></p> <p>输入提交的标题，描述</p> <p><img src="images/1613981028575.png" alt="1613981028575"></p> <h2 id="_4-jest代码测试"><a href="#_4-jest代码测试" aria-hidden="true" class="header-anchor">#</a> 4. jest代码测试</h2> <p>参考<a href="https://jspang.com/detailed?id=65#toc340" target="_blank" rel="noopener noreferrer">技术胖博客<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="_4-1-使用-npm-安装："><a href="#_4-1-使用-npm-安装：" aria-hidden="true" class="header-anchor">#</a> 4.1 使用 <a href="https://www.npmjs.com/package/jest" target="_blank" rel="noopener noreferrer"><code>npm</code><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 安装：</h3> <div class="language-SH extra-class"><pre class="language-sh"><code><span class="token comment"># 全局安装，可以直接命令行输入jest执行测试</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g jest
+<span class="token comment"># 开发模式安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> -D jest
+</code></pre></div><h3 id="_4-2-使用babel"><a href="#_4-2-使用babel" aria-hidden="true" class="header-anchor">#</a> 4.2 使用babel</h3> <p>Jest默认支持的是<code>CommonJS</code>规范，也就是<code>Node.js</code>中的语法，他只支持<code>require</code>这种引用。所以我们使用<code>import...from...</code>是ES6的语法，所以使用就会报错  。我们找到了报错的原因后，就非常好解决了，只要我们把<code>import</code>形式转行成<code>require</code>就可以了呗。 所以我们就需要安装babel进行转换。</p> <p><strong>安装</strong></p> <div class="language-SH extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> -D babel-jest 
+<span class="token comment"># 以下在创建项目的时候已经安装了，</span>
+<span class="token comment"># npm install -D @babel/core @babel/preset-env</span>
+</code></pre></div><p>在项目的根目录下创建 <code>babel.config.js</code> ，通过配置 Babel 使其能够兼容当前的 Node 版本</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// babel.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    presets<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'@babel/preset-env'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_4-3-jest-初始化配置"><a href="#_4-3-jest-初始化配置" aria-hidden="true" class="header-anchor">#</a> 4.3 jest 初始化配置</h3> <p>根据自己的需要选择配置</p> <div class="language-sh extra-class"><pre class="language-sh"><code>npx jest --init
+
+
+The following questions will <span class="token builtin class-name">help</span> Jest to create a suitable configuration <span class="token keyword">for</span> your project
+
+√ Would you like to use Jest when running <span class="token string">&quot;test&quot;</span> script <span class="token keyword">in</span> <span class="token string">&quot;package.json&quot;</span>? <span class="token punctuation">..</span>. <span class="token function">yes</span>
+√ Would you like to use Typescript <span class="token keyword">for</span> the configuration file? <span class="token punctuation">..</span>. no
+√ Choose the <span class="token builtin class-name">test</span> environment that will be used <span class="token keyword">for</span> testing » jsdom <span class="token punctuation">(</span>browser-like<span class="token punctuation">)</span>
+√ Do you want Jest to <span class="token function">add</span> coverage reports? <span class="token punctuation">..</span>. <span class="token function">yes</span>
+× Which provider should be used to instrument code <span class="token keyword">for</span> coverage? » v8
+</code></pre></div><p><code>jest.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/*
+ * For a detailed explanation regarding each configuration property, visit:
+ * https://jestjs.io/docs/en/configuration.html
+ */</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  <span class="token comment">// The directory where Jest should output its coverage files</span>
+  coverageDirectory<span class="token punctuation">:</span> <span class="token string">'coverage'</span><span class="token punctuation">,</span>
+
+
+  <span class="token comment">// Indicates which provider should be used to instrument code for coverage</span>
+  coverageProvider<span class="token punctuation">:</span> <span class="token string">&quot;v8&quot;</span><span class="token punctuation">,</span>
+
+
+  <span class="token comment">// A set of global variables that need to be available in all test environments</span>
+  globals<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+  <span class="token comment">// The test environment that will be used for testing</span>
+  testEnvironment<span class="token punctuation">:</span> <span class="token string">&quot;jest-environment-jsdom&quot;</span><span class="token punctuation">,</span>
+	<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="_4-4-测试用例"><a href="#_4-4-测试用例" aria-hidden="true" class="header-anchor">#</a> 4.4 测试用例</h3> <p>在根目录创建文件夹test，然后在test里创建测试用例js，例如：</p> <p><code>test/function/call.test.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>call<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../src/function/call.js'</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'对象calc的add方法,this指向other'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> calc <span class="token operator">=</span> <span class="token punctuation">{</span>
+        num<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">add</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">+</span> a <span class="token operator">+</span> b
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> other <span class="token operator">=</span> <span class="token punctuation">{</span>
+        num<span class="token punctuation">:</span><span class="token number">10</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">call</span><span class="token punctuation">(</span>calc<span class="token punctuation">.</span>add<span class="token punctuation">,</span>other<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'对象calc的add方法,this指向全局对象'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> calc <span class="token operator">=</span> <span class="token punctuation">{</span>
+        num<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">add</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">+</span> a <span class="token operator">+</span> b
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    window<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">20</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">call</span><span class="token punctuation">(</span>calc<span class="token punctuation">.</span>add<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">23</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>在命令行执行</p> <div class="language-sh extra-class"><pre class="language-sh"><code>jest
+</code></pre></div><p><img src="images/1613977968930.png" alt="1613977968930"></p> <h3 id="_4-5-测试覆盖率"><a href="#_4-5-测试覆盖率" aria-hidden="true" class="header-anchor">#</a> 4.5 测试覆盖率</h3> <p>先来了解一个概念<code>code coverage</code>,代码测试覆盖率，就是我们的测试代码，对功能性代码和业务逻辑代码作了百分多少的测试，这个百分比，就叫做代码测试覆盖率。</p> <p><code>coverageDirectroy</code>的配置是用来更改生成代码覆盖率文件的目录，</p> <div class="language-js extra-class"><pre class="language-js"><code>coverageDirectory <span class="token punctuation">:</span> <span class="token string">&quot;coverage&quot;</span>  
+</code></pre></div><p>当这个选项被打开后，我们就可以使用下面的命令,<code>jest</code>就会自动给我们生成一个代码测试覆盖率的说明。</p> <div class="language-js extra-class"><pre class="language-js"><code> npx jest <span class="token operator">--</span>coverage
+</code></pre></div><p><img src="images/1613978019671.png" alt="1613978019671"></p> <p>当然这个不仅会有一个简单的终端图表，还会生成一个<code>coverage</code>的文件夹，这里边有很多文件。</p> <p>我们可以打开<code>coverage&gt;lcov-reporrt&gt;index.html</code>文件，这时候就可以看到一个网页形式的，非常漂亮的测试覆盖率报告。</p> <p><img src="images/1613978182366.png" alt="1613978182366"></p> <p>那这个配置项可以作什么配置那？我们先来作一个修改，把<code>coverageDirectory : &quot;coverage&quot;</code> 改为<code>coverageDirectory : &quot;testReport&quot;</code>,然后再使用<code>npx jest --coverage</code>,这时候你会发现，生成的报告文件夹，不再是<code>coverage</code>而是变成了<code>testReport</code>。</p> <h3 id="_4-5-开启自动测试"><a href="#_4-5-开启自动测试" aria-hidden="true" class="header-anchor">#</a> 4.5 开启自动测试</h3> <p>每次修改测试用例，我们都手动输入<code>npx test</code> ，这显得很lower。可以通过配置<code>package.json</code>文件来设置。修改如下</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jest&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;coverage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jest --coverage&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;autotest&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jest --watchAll&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>修改保存后，我们在终端运行<code>npx autotest</code>,这时候测试一次后，它并没有结束，而是等待测试文件的变化，变化后就会自动进行测试。</p> <h3 id="_4-6-jest中的匹配器"><a href="#_4-6-jest中的匹配器" aria-hidden="true" class="header-anchor">#</a> 4.6 jest中的匹配器</h3> <h4 id="tobe"><a href="#tobe" aria-hidden="true" class="header-anchor">#</a> toBe</h4> <p>toBe()  这个相当是等同于<code>===</code> , 也就是我们常说的严格相等</p> <h4 id="toequal"><a href="#toequal" aria-hidden="true" class="header-anchor">#</a> toEqual</h4> <p><code>toEqual()</code>匹配器  可以把它理解成只要内容相等  就可以通过测试</p> <h4 id="tostrictequal"><a href="#tostrictequal" aria-hidden="true" class="header-anchor">#</a> toStrictEqual</h4> <p>使用 <code>. tostrictequal</code> 来测试对象是否具有相同的类型和结构。</p> <p>与.toEqual差异:</p> <ol><li>带有未定义属性的键被选中。例如，当使用<code>. tostrictequal</code>时，<code>{a: undefined, b: 2}</code>不匹配<code>{b: 2}</code>。</li> <li>检查了数组稀疏性。例如:<code>[，1]</code>在使用<code>. tostrictequal</code>时不匹配<code>[undefined, 1]</code>。</li> <li>对象类型被检查为相等。例如，一个有字段A和b的类实例将不等于一个有字段A和b的文字对象。</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">&quot;新数组的每一个值是原数组的值*10&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token function">expect</span><span class="token punctuation">(</span>
+    <span class="token function">map</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> item <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toStrictEqual</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tobenull"><a href="#tobenull" aria-hidden="true" class="header-anchor">#</a> toBeNull</h4> <p><code>toBeNul()</code>匹配器只匹配<code>null</code>值，不匹配<code>undefined</code>的值</p> <h4 id="tobeundefined"><a href="#tobeundefined" aria-hidden="true" class="header-anchor">#</a> toBeUndefined</h4> <p>我们要匹配<code>undefined</code>时，就可以使用<code>toBeUndifined()</code>匹配器</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeUndefined测试'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span>   
+    <span class="token function">expect</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeUndefined</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> 
+</code></pre></div><h4 id="tobedefined"><a href="#tobedefined" aria-hidden="true" class="header-anchor">#</a> toBeDefined</h4> <p><code>toBeDefined()</code>匹配器的意思是只要定义过了，都可以匹配成功，例如下面的代码：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeDefined测试'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token string">'jspang'</span>  
+    <span class="token function">expect</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeDefined</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> 
+</code></pre></div><p>这里需要注意的是，我给一个<code>null</code>值也是可以通过测试的。</p> <h4 id="tobetruthy"><a href="#tobetruthy" aria-hidden="true" class="header-anchor">#</a> toBeTruthy</h4> <p>这个是<code>true</code>和<code>false</code>匹配器，就相当于判断真假的。比如说写下面这样一段代码:</p> <div class="language- extra-class"><pre class="language-text"><code>test('toBeTruthy 测试',()=&gt;{
+    const a = 0
+    expect(a).toBeTruthy()
+}) 
+</code></pre></div><p>这样测试就过不去了，因为这里的0，如果判断真假时，就是false，所以无法通过。同样道理<code>null</code>也是无法通过的。 但是我们给个<code>1</code>或者<code>abc</code>字符串，就可以通过测试了。</p> <h4 id="tobefalsy"><a href="#tobefalsy" aria-hidden="true" class="header-anchor">#</a> toBeFalsy</h4> <p>有真就有假，跟<code>toBeTruthy()</code>对应的就是<code>toBeFalsy</code>,这个匹配器只要是返回的<code>false</code>就可以通过测试。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeFalsy 测试'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeFalsy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> 
+</code></pre></div><h4 id="tobegreaterthan"><a href="#tobegreaterthan" aria-hidden="true" class="header-anchor">#</a> toBeGreaterThan</h4> <p>这个是用来作数字比较的，大于什么数值，只要大于传入的数值，就可以通过测试。我们来写一段代码来看一下。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeGreaterThan匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeGreaterThan</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="tobelessthan"><a href="#tobelessthan" aria-hidden="true" class="header-anchor">#</a> toBeLessThan</h4> <p><code>toBeLessThan</code>跟<code>toBeGreaterThan</code>相对应的，就是小于一个数字时，就可以通过测试。代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeLessThan匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeLessThan</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>10比11小，所以测试用例顺利通过。</p> <h4 id="tobegreaterthanorequal"><a href="#tobegreaterthanorequal" aria-hidden="true" class="header-anchor">#</a> toBeGreaterThanOrEqual</h4> <p>当测试结果数据大于等于期待数字时，可以通过测试。比如下面的代码是没办法通过测试的。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeGreaterThan匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeGreaterThan</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>但是我们使用了<code>toBeGreaterThanOrEqual()</code>就可以通过测试。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeGreaterThanOrEqual匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeGreaterThanOrEqual</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="tobegreaterthanorequal-2"><a href="#tobegreaterthanorequal-2" aria-hidden="true" class="header-anchor">#</a> toBeGreaterThanOrEqual</h4> <p>这个跟<code>toBeGreaterThanOrEqual()</code>相对应，所以就不做过多的介绍了。</p> <h4 id="tobecloseto"><a href="#tobecloseto" aria-hidden="true" class="header-anchor">#</a> toBeCloseTo</h4> <p>这个是可以自动消除<code>JavaScript</code>浮点精度错误的匹配器，举个例子，比如我们让<code>0.1</code>和<code>0.2</code>相加，这时候<code>js</code>得到的值应该是<code>0.30000000000004</code>,所以如果用<code>toEqual()</code>匹配器，测试用例会通过不了测试的。</p> <p>比如我们把测试用例写成这样，就不会通过:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toEqual匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> one <span class="token operator">=</span> <span class="token number">0.1</span>
+    <span class="token keyword">const</span> two <span class="token operator">=</span> <span class="token number">0.2</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>one <span class="token operator">+</span> two<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这时候我们就需要使用<code>toBeCloseTo()</code>匹配器，可以顺利通过测试,代码如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toBeCloseTo匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> one <span class="token operator">=</span> <span class="token number">0.1</span>
+    <span class="token keyword">const</span> two <span class="token operator">=</span> <span class="token number">0.2</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>one <span class="token operator">+</span> two<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeCloseTo</span><span class="token punctuation">(</span><span class="token number">0.3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这样就可以顺利通过测试了，这就是它的作用。</p> <p>这节讲的匹配器都是跟数字有关的匹配器，可以动手做一下，但是我个人觉的没必要记忆，你只要知道有这些匹配器，在你的意识里有就可以了。当我们使用的多了，自然就记住了，并且会使用了。</p> <h4 id="tomatch字符串包含匹配器"><a href="#tomatch字符串包含匹配器" aria-hidden="true" class="header-anchor">#</a> toMatch字符串包含匹配器</h4> <p>字符串包含匹配器，比如象牙山洗脚城有三个美女：谢大脚、刘英和小红，这时候我们要看看字符串中有没有谢大脚就可以使用<code>toMatch()</code>匹配器。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toMatch匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> str<span class="token operator">=</span><span class="token string">&quot;谢大脚、刘英、小红&quot;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toMatch</span><span class="token punctuation">(</span><span class="token string">'谢大脚'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>因为确实有“谢大脚”,所以就通过测试了，当然你也可以写正则表达式。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toMatch匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> str<span class="token operator">=</span><span class="token string">&quot;谢大脚、刘英、小红&quot;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toMatch</span><span class="token punctuation">(</span><span class="token regex">/谢大脚/</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>我们可以开启<code>jest</code>就可以看到测试结果也是正确的。</p> <h4 id="tocontain"><a href="#tocontain" aria-hidden="true" class="header-anchor">#</a> toContain</h4> <p>刚才我们使用的只是一个字符串包换关系的匹配器，但是在工作中使用的多是数组，所以这里我们使用数组的匹配器<code>toContain()</code>。比如还是上面象牙山洗脚城的案例，我们就可以写成这样。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toContain匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> arr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'谢大脚'</span><span class="token punctuation">,</span><span class="token string">'刘英'</span><span class="token punctuation">,</span><span class="token string">'小红'</span><span class="token punctuation">]</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toContain</span><span class="token punctuation">(</span><span class="token string">'谢大脚'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>当然他也可以完美的兼容<code>set</code>的测试，比如把下面代码改为下面的方式。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toContain匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> arr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'谢大脚'</span><span class="token punctuation">,</span><span class="token string">'刘英'</span><span class="token punctuation">,</span><span class="token string">'小红'</span><span class="token punctuation">]</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toContain</span><span class="token punctuation">(</span><span class="token string">'谢大脚'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="tothrow"><a href="#tothrow" aria-hidden="true" class="header-anchor">#</a> toThrow</h4> <p>专门对异常进行处理的匹配器，可以检测一个方法会不会抛出异常。比如我们下面一段代码。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">throwNewErrorFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'this is a new error'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toThrow匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>throwNewErrorFunc<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toThrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>我们也可以对这个匹配器中加一些字符串，意思就是抛出的异常必须和字符串相对应。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">throwNewErrorFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'this is a new error'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toThrow匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>throwNewErrorFunc<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toThrow</span><span class="token punctuation">(</span><span class="token string">'this is a new error'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>如果字符串不匹配，也没办法通过异常测试。</p> <h4 id="not"><a href="#not" aria-hidden="true" class="header-anchor">#</a> not</h4> <p><code>not</code>匹配器是<code>Jest</code>中比较特殊的匹配器，意思就是<code>相反</code>或者说<code>取反</code>.比如上面的例子，我们不希望方法抛出异常，就可以使用<code>not</code>匹配器。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">throwNewErrorFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'this is a new error'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'toThrow匹配器'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span>throwNewErrorFunc<span class="token punctuation">)</span><span class="token punctuation">.</span>not<span class="token punctuation">.</span><span class="token function">toThrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>现在这个测试用例就不能通过测试了，我们需要删除或注释掉抛出的异常，才可以通过测试。这就是<code>not</code>匹配器的用法。</p> <h4 id="匹配器自学方法"><a href="#匹配器自学方法" aria-hidden="true" class="header-anchor">#</a> 匹配器自学方法</h4> <p>文章中我们只讲了最常用的一些匹配器，<code>Jest</code>当中有很多匹配器，我不可能全部都讲到。所以这里给出官方文档，你可以自学。</p> <blockquote><p>https://jestjs.io/docs/en/expect</p></blockquote> <p>你可以通过这个文档自学，或者在工作中需要时来查询一下。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2/25/2021, 10:32:59 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.ee223f02.js" defer></script><script src="/blog/assets/js/2.f364336e.js" defer></script><script src="/blog/assets/js/38.9d939308.js" defer></script>
+  </body>
+</html>

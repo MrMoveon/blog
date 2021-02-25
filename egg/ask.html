@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端开发笔记</title>
+    <meta name="description" content="前端开发笔记">
+    <link rel="icon" href="/blog/icon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.45e5a3ae.css" as="style"><link rel="preload" href="/blog/assets/js/app.ee223f02.js" as="script"><link rel="preload" href="/blog/assets/js/2.f364336e.js" as="script"><link rel="preload" href="/blog/assets/js/20.472050f8.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.60d9a5c4.js"><link rel="prefetch" href="/blog/assets/js/11.9d12addb.js"><link rel="prefetch" href="/blog/assets/js/12.8ef0bd8a.js"><link rel="prefetch" href="/blog/assets/js/13.71ffc42f.js"><link rel="prefetch" href="/blog/assets/js/14.25b3510a.js"><link rel="prefetch" href="/blog/assets/js/15.c4d91af5.js"><link rel="prefetch" href="/blog/assets/js/16.948c6a33.js"><link rel="prefetch" href="/blog/assets/js/17.0e6c3b39.js"><link rel="prefetch" href="/blog/assets/js/18.5f7af77b.js"><link rel="prefetch" href="/blog/assets/js/19.3d23eaff.js"><link rel="prefetch" href="/blog/assets/js/21.daaff1eb.js"><link rel="prefetch" href="/blog/assets/js/22.ae3ff2ee.js"><link rel="prefetch" href="/blog/assets/js/23.06d58a4e.js"><link rel="prefetch" href="/blog/assets/js/24.8df026f6.js"><link rel="prefetch" href="/blog/assets/js/25.8fa3c5ac.js"><link rel="prefetch" href="/blog/assets/js/26.b9e79cc9.js"><link rel="prefetch" href="/blog/assets/js/27.0c29d378.js"><link rel="prefetch" href="/blog/assets/js/28.5c6b388b.js"><link rel="prefetch" href="/blog/assets/js/29.a0f69e48.js"><link rel="prefetch" href="/blog/assets/js/3.641e1028.js"><link rel="prefetch" href="/blog/assets/js/30.dc7fbcb3.js"><link rel="prefetch" href="/blog/assets/js/31.a0f54c32.js"><link rel="prefetch" href="/blog/assets/js/32.06b2a848.js"><link rel="prefetch" href="/blog/assets/js/33.1707ffb1.js"><link rel="prefetch" href="/blog/assets/js/34.4a894dbb.js"><link rel="prefetch" href="/blog/assets/js/35.380e3cca.js"><link rel="prefetch" href="/blog/assets/js/36.cbda8a08.js"><link rel="prefetch" href="/blog/assets/js/37.a4ee9d32.js"><link rel="prefetch" href="/blog/assets/js/38.9d939308.js"><link rel="prefetch" href="/blog/assets/js/39.0db069f8.js"><link rel="prefetch" href="/blog/assets/js/4.dd025489.js"><link rel="prefetch" href="/blog/assets/js/40.7207834f.js"><link rel="prefetch" href="/blog/assets/js/41.a0452c50.js"><link rel="prefetch" href="/blog/assets/js/42.2122454f.js"><link rel="prefetch" href="/blog/assets/js/43.8bb0a71b.js"><link rel="prefetch" href="/blog/assets/js/44.3e769886.js"><link rel="prefetch" href="/blog/assets/js/5.2cc523f9.js"><link rel="prefetch" href="/blog/assets/js/6.86e346f0.js"><link rel="prefetch" href="/blog/assets/js/7.d17b9335.js"><link rel="prefetch" href="/blog/assets/js/8.b2177cb3.js"><link rel="prefetch" href="/blog/assets/js/9.a8aca7d1.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.45e5a3ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">前端开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link router-link-active">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link router-link-exact-active router-link-active">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/framework/jquery/" class="nav-link">jquery源码分析</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/" class="nav-link">vue最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/mobile-base-template.html" class="nav-link">vue移动端模版</a></li><li class="dropdown-item"><!----> <a href="/blog/typescript/" class="nav-link">typescript</a></li><li class="dropdown-item"><!----> <a href="/blog/mina/" class="nav-link">微信小程序</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tools/dd-utils.html" class="nav-link">自定义工具函数库</a></li><li class="dropdown-item"><!----> <a href="/blog/vscode-plugins/" class="nav-link">vscode常用插件</a></li><li class="dropdown-item"><!----> <a href="/blog/vuepress/" class="nav-link">vuepress</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">git</a></li><li class="dropdown-item"><!----> <a href="/blog/mock/" class="nav-link">mock</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/" class="nav-link">工具函數</a></li><li class="dropdown-item"><!----> <a href="/blog/tools/date.html" class="nav-link">日期函數</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/mongoDB/" class="nav-link">mongoDB学习</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/aggregate.html" class="nav-link">mongoDB aggregate</a></li><li class="dropdown-item"><!----> <a href="/blog/mongoDB/learning/mongoose.html" class="nav-link">mongoose</a></li><li class="dropdown-item"><!----> <a href="/blog/Redis/" class="nav-link">Redis</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/svg.html" class="nav-link">svg</a></li><li class="dropdown-item"><!----> <a href="/blog/svg-canvas/canvas.html" class="nav-link">canvas</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">electron</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/electron/" class="nav-link">electron 基础</a></li><li class="dropdown-item"><!----> <a href="/blog/electron/meos.html" class="nav-link">electron 进阶</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">egg</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/egg/" class="nav-link router-link-active">egg最佳实践</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask.html" class="nav-link router-link-exact-active router-link-active">egg ask项目后端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目前端</a></li><li class="dropdown-item"><!----> <a href="/blog/egg/ask-client.html" class="nav-link">egg ask项目管理平台</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">uniapp</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/uniapp/xiaomi.html" class="nav-link">项目实战-xiaomi</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/scaffold/" class="nav-link">手撸一个前端脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/gulp_multi_pages/" class="nav-link">gulp多页面应用脚手架</a></li><li class="dropdown-item"><!----> <a href="/blog/regexp/" class="nav-link">正则学习</a></li><li class="dropdown-item"><!----> <a href="/blog/webapp/" class="nav-link">webapp</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/MrMoveon/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/egg/ask.html#初始化项目" class="sidebar-link">初始化项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_1、创建vue项目" class="sidebar-link">1、创建vue项目</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_2、创建后端项目" class="sidebar-link">2、创建后端项目</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_3、ask中同时启动front和back项目" class="sidebar-link">3、ask中同时启动front和back项目</a></li></ul></li><li><a href="/blog/egg/ask.html#基础设施搭建" class="sidebar-link">基础设施搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_1、extend-helper-js助手函数" class="sidebar-link">1、extend helper.js助手函数</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_2、路由分组" class="sidebar-link">2、路由分组</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_3、连接mongodb" class="sidebar-link">3、连接mongoDB</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_4、参数校验" class="sidebar-link">4、参数校验</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_5、跨域处理cors" class="sidebar-link">5、跨域处理cors</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_6、redis" class="sidebar-link">6、redis</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_7、验证码" class="sidebar-link">7、验证码</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_8、加密bcrypt" class="sidebar-link">8、加密bcrypt</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_8、token" class="sidebar-link">8、token</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#_8、自定义中间件" class="sidebar-link">8、自定义中间件</a></li></ul></li><li><a href="/blog/egg/ask.html#登录模块" class="sidebar-link">登录模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#用户登录" class="sidebar-link">用户登录</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#用户注册" class="sidebar-link">用户注册</a></li></ul></li><li><a href="/blog/egg/ask.html#公共模块" class="sidebar-link">公共模块</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/egg/ask.html#svg验证码" class="sidebar-link">svg验证码</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#单文件上传" class="sidebar-link">单文件上传</a></li><li class="sidebar-sub-header"><a href="/blog/egg/ask.html#多文件上传" class="sidebar-link">多文件上传</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>[TOC]</p> <h1 id="ask-问答社交"><a href="#ask-问答社交" aria-hidden="true" class="header-anchor">#</a> ask 问答社交</h1> <h2 id="初始化项目"><a href="#初始化项目" aria-hidden="true" class="header-anchor">#</a> 初始化项目</h2> <h3 id="_1、创建vue项目"><a href="#_1、创建vue项目" aria-hidden="true" class="header-anchor">#</a> 1、创建vue项目</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>vue create front
+</code></pre></div><h3 id="_2、创建后端项目"><a href="#_2、创建后端项目" aria-hidden="true" class="header-anchor">#</a> 2、创建后端项目</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i -g egg-init
+<span class="token comment"># 用cnpm安装，npm会连接超时</span>
+cnpm init egg --type<span class="token operator">=</span>simple
+</code></pre></div><h3 id="_3、ask中同时启动front和back项目"><a href="#_3、ask中同时启动front和back项目" aria-hidden="true" class="header-anchor">#</a> 3、ask中同时启动front和back项目</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 初始化npm，创建package.json</span>
+<span class="token function">npm</span> init
+<span class="token comment"># 安装 concurrently模块</span>
+<span class="token function">npm</span> i concurrently -D
+</code></pre></div><p>修改package.json，在scripts中增加</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">&quot;scripts&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;dev:client&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;npm start --prefix front&quot;</span><span class="token punctuation">,</span>  <span class="token comment">// 启动front项目</span>
+    <span class="token string">&quot;dev:back&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;npm run dev --prefix back&quot;</span><span class="token punctuation">,</span>	<span class="token comment">// 启动back项目</span>
+    <span class="token string">&quot;start&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;concurrently npm:dev:*&quot;</span>	<span class="token comment">// 同时启动front和back项目</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>完整package.json</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;ask&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;ask&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev:client&quot;: &quot;npm start --prefix front&quot;,
+    &quot;dev:back&quot;: &quot;npm run dev --prefix back&quot;,
+    &quot;start&quot;: &quot;concurrently npm:dev:*&quot;
+  },
+  &quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;https://gitee.com/mf/ask.git&quot;
+  },
+  &quot;keywords&quot;: [
+    &quot;ask&quot;
+  ],
+  &quot;author&quot;: &quot;afei&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;concurrently&quot;: &quot;^5.3.0&quot;
+  }
+}
+
+</code></pre></div><h2 id="基础设施搭建"><a href="#基础设施搭建" aria-hidden="true" class="header-anchor">#</a> 基础设施搭建</h2> <h3 id="_1、extend-helper-js助手函数"><a href="#_1、extend-helper-js助手函数" aria-hidden="true" class="header-anchor">#</a> 1、extend helper.js助手函数</h3> <div class="language- extra-class"><pre class="language-text"><code>'use strict'
+const fs = require('fs-extra')
+const path = require('path')
+const dayjs = require('dayjs')
+const { v4: uuidv4 } = require('uuid')
+/**
+ * @description 处理成功响应
+ * @param {*} param0 对象 {ctx,res,msg}
+ */
+function success({ ctx, res = null, message = '请求成功' }) {
+  ctx.body = {
+    code: 200,
+    data: res,
+    message,
+  }
+  ctx.status = 200
+}
+/**
+ * 校验验证码
+ * @param {*} inputCode 输入的验证码
+ * @param {*} code redis的验证码
+ */
+function checkCaptcha(inputCode, code) {
+  if (String(inputCode).toLowerCase() === String(code).toLowerCase()) {
+    return true
+  }
+  return false
+}
+/**
+ * 移除对象的空属性
+ * @param {*} json
+ */
+function removeEmptyAttr(json) {
+  const obj = {}
+  for (const key in json) {
+    if (json[key] || typeof json[key] === 'number') {
+      obj[key] = json[key]
+    }
+  }
+  return obj
+}
+/**
+ * 将对象里的类数字的值转为数字
+ * @param {*} json
+ */
+function toNumber(json) {
+  const obj = {}
+  for (const key in json) {
+    obj[key] = parseInt(json[key])
+  }
+  return obj
+}
+/**
+ * 根据stream创建路径
+ * @param {*} stream
+ */
+async function createFilePath(stream) {
+  const dirname = this.config.upload + dayjs().format('YYYYMMDD')
+  // 生成目录
+  await fs.ensureDir(dirname)
+  // 文件名
+  const fileName = uuidv4()
+  // 扩展名
+  const extname = path.extname(stream.filename)
+  // 完整的文件路径
+  const target = `${dirname}/${fileName}${extname}`
+  return target
+}
+class Store {
+  async set(app, name, value, exp) {
+    if (!exp) {
+      return app.redis.set(name, value)
+    }
+    return app.redis.set(name, value, 'EX', exp)
+  }
+  async get(app, name) {
+    return app.redis.get(name)
+  }
+}
+module.exports = {
+  success,
+  checkCaptcha,
+  removeEmptyAttr,
+  toNumber,
+  createFilePath,
+  store: new Store(),
+}
+
+
+</code></pre></div><h3 id="_2、路由分组"><a href="#_2、路由分组" aria-hidden="true" class="header-anchor">#</a> 2、路由分组</h3> <p><a href="https://www.npmjs.com/package/egg-router-group" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i egg-router-group --save
+</code></pre></div><p><strong>启用插件</strong></p> <p>config/plugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/** @type Egg.EggPlugin */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+ routerGroup<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">'egg-router-group'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>使用</strong></p> <p><em>app/router.js</em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/**
+ * @param {Egg.Application} app - egg application
+ */</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">app</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> router<span class="token punctuation">,</span> controller <span class="token punctuation">}</span> <span class="token operator">=</span> app
+
+  router<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">{</span> prefix<span class="token punctuation">:</span> <span class="token string">'/api/v1'</span><span class="token punctuation">,</span> middlewares<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">router</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> controller<span class="token punctuation">.</span>home<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
+    router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/login'</span><span class="token punctuation">,</span> controller<span class="token punctuation">.</span>v1<span class="token punctuation">.</span>user<span class="token punctuation">.</span>login<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>目前支持这三种属性</strong></p> <ul><li>路由别名前缀: name</li> <li>路由url前缀: prefix</li> <li>中间件: middlewares</li></ul> <h3 id="_3、连接mongodb"><a href="#_3、连接mongodb" aria-hidden="true" class="header-anchor">#</a> 3、连接mongoDB</h3> <p><strong>创建数据库和数据库的账户密码权限</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code>use ask
+db.createUser<span class="token punctuation">(</span><span class="token punctuation">{</span>user:<span class="token string">&quot;askadmin&quot;</span>,pwd:<span class="token string">&quot;123456&quot;</span>,roles:<span class="token punctuation">[</span><span class="token punctuation">{</span>role:<span class="token string">&quot;dbOwner&quot;</span>,db:ask<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i egg-mongoose --save
+</code></pre></div><p><strong>启用插件</strong></p> <p>config/plugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/** @type Egg.EggPlugin */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  mongoose<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">'egg-mongoose'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>配置插件</strong></p> <p><em>config/config.default.js</em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* eslint valid-jsdoc: &quot;off&quot; */</span>
+
+<span class="token string">'use strict'</span>
+
+<span class="token comment">/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">appInfo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token operator">...</span>
+  <span class="token comment">// add your user config here</span>
+  <span class="token keyword">const</span> userConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    mongoose<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      url<span class="token punctuation">:</span> <span class="token string">'mongodb://askadmin:123456@127.0.0.1:27017/ask'</span><span class="token punctuation">,</span>
+       <span class="token comment">// 必须设置，不然会报错</span>
+      options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        useUnifiedTopology<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        useNewUrlParser<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>config<span class="token punctuation">,</span>
+    <span class="token operator">...</span>userConfig<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="_4、参数校验"><a href="#_4、参数校验" aria-hidden="true" class="header-anchor">#</a> 4、参数校验</h3> <p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i egg-validate-plus --save
+</code></pre></div><p><strong>启用插件</strong></p> <p>config/plugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/** @type Egg.EggPlugin */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  validatePlus<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">'egg-validate-plus'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>配置插件</strong></p> <p><em>config/config.default.js</em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* eslint valid-jsdoc: &quot;off&quot; */</span>
+
+<span class="token string">'use strict'</span>
+
+<span class="token comment">/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">appInfo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token operator">...</span>
+  <span class="token comment">// add your user config here</span>
+  <span class="token keyword">const</span> userConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    validatePlus<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token function">resolveError</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> errors</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>errors<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          ctx<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">'json'</span>
+          ctx<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token number">200</span>
+          ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token punctuation">{</span>
+            code<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
+            error<span class="token punctuation">:</span> errors<span class="token punctuation">,</span>
+            message<span class="token punctuation">:</span> <span class="token string">'参数错误'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>config<span class="token punctuation">,</span>
+    <span class="token operator">...</span>userConfig<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="_4-1：目录"><a href="#_4-1：目录" aria-hidden="true" class="header-anchor">#</a> 4-1：目录</h4> <p>参数校验规则，需要放到app/rules目录下</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token operator">|</span>- app
+        <span class="token operator">|</span>- controller
+            <span class="token operator">|</span>- v1
+            	<span class="token operator">|</span>- user.js <span class="token punctuation">[</span>user 控制器，包含login方法<span class="token punctuation">]</span>
+            
+        <span class="token operator">|</span>- rules
+            <span class="token operator">|</span>- user
+                <span class="token operator">|</span>- login.js <span class="token punctuation">[</span>用户登录参数校验规则<span class="token punctuation">]</span>
+            
+</code></pre></div><h4 id="_4-2：添加验证规则"><a href="#_4-2：添加验证规则" aria-hidden="true" class="header-anchor">#</a> 4-2：添加验证规则</h4> <p>rules/user/login.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+<span class="token keyword">const</span> rule <span class="token operator">=</span> <span class="token punctuation">{</span>
+  username<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">'用户名不能为空'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  password<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">'密码不能为空'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> min<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">,</span> max<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">'密码长度为6-20个字符'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  code<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      message<span class="token punctuation">:</span> <span class="token string">'验证码不能为空'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      len<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+      message<span class="token punctuation">:</span> <span class="token string">'请输入4位验证码'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> rule
+
+</code></pre></div><h4 id="_4-3：控制器进行验证"><a href="#_4-3：控制器进行验证" aria-hidden="true" class="header-anchor">#</a> 4-3：控制器进行验证</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+<span class="token keyword">const</span> Controller <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Controller
+<span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> ctx<span class="token punctuation">,</span> app <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token comment">// 获取请求参数</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> body <span class="token punctuation">}</span> <span class="token operator">=</span> ctx<span class="token punctuation">.</span>request
+    <span class="token comment">// 获取规则</span>
+    <span class="token keyword">const</span> rule <span class="token operator">=</span> app<span class="token punctuation">.</span>rules<span class="token punctuation">.</span>user<span class="token punctuation">.</span>login
+    <span class="token comment">// 校验规则</span>
+    <span class="token keyword">const</span> validateResult <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span>rule<span class="token punctuation">,</span> body<span class="token punctuation">)</span>
+    <span class="token comment">// 不通过</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>validateResult<span class="token punctuation">)</span> <span class="token keyword">return</span>
+    <span class="token comment">// 通过处理逻辑  </span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> ctx<span class="token punctuation">.</span>service<span class="token punctuation">.</span>user<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ctx<span class="token punctuation">.</span>helper<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token punctuation">{</span> ctx<span class="token punctuation">,</span> res <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> User
+
+</code></pre></div><h4 id="_4-4：验证规则参考"><a href="#_4-4：验证规则参考" aria-hidden="true" class="header-anchor">#</a> 4-4：验证规则参考</h4> <p><a href="https://github.com/yiminghe/async-validator" target="_blank" rel="noopener noreferrer">async-validator<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h5 id="type-内置类型"><a href="#type-内置类型" aria-hidden="true" class="header-anchor">#</a> Type 内置类型</h5> <p>下列是 <code>type</code> 可用的值：</p> <ul><li><code>string</code>: 必须是 <code>string</code>. <code>This is the default type.</code></li> <li><code>number</code>: 必须是 <code>number</code>.</li> <li><code>boolean</code>: 必须是 <code>boolean</code>.</li> <li><code>method</code>: 必须是 <code>function</code>.</li> <li><code>regexp</code>: 必须是正则或者是在调用 <code>new RegExp</code> 时不报错的字符串.</li> <li><code>integer</code>: 整数.</li> <li><code>float</code>: 浮点数.</li> <li><code>array</code>: 必须是数组，通过 <code>Array.isArray</code> 判断.</li> <li><code>object</code>: 是对象且不为数组.</li> <li><code>enum</code>: 值必须出现在 <code>enmu</code> 枚举值中.</li> <li><code>date</code>: 合法的日期，使用 <code>Date</code> 判断</li> <li><code>url</code>: url.</li> <li><code>hex</code>: 16进制.</li> <li><code>email</code>: 邮箱地址.</li></ul> <h5 id="required"><a href="#required" aria-hidden="true" class="header-anchor">#</a> Required</h5> <p><code>required</code> 属性代表这个字段必须出现在对象中</p> <h5 id="pattern"><a href="#pattern" aria-hidden="true" class="header-anchor">#</a> Pattern</h5> <p><code>pattern</code> 属性代表需要符合的正则</p> <h5 id="range"><a href="#range" aria-hidden="true" class="header-anchor">#</a> Range</h5> <p>使用 <code>min</code> 和 <code>max</code> 属性定义范围，对于字符串和数组会与 <code>value.length</code> 比较，对于数字会直接与值比较</p> <h5 id="length"><a href="#length" aria-hidden="true" class="header-anchor">#</a> Length</h5> <p>使用 <code>len</code> 属性直接指定长度，会与字符串和数组的 <code>value.length</code> 比较相等，对于数字会直接与值比较是否相等
+如果 <code>len</code> 与 <code>min</code> 和 <code>max</code> 同时使用， <code>len</code> 优先。</p> <h5 id="enumerable"><a href="#enumerable" aria-hidden="true" class="header-anchor">#</a> Enumerable</h5> <p>可枚举值</p> <p>对于可以枚举出所有情况的类型，可以使用枚举校验，如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> descriptor <span class="token operator">=</span> <span class="token punctuation">{</span>
+  role<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;enum&quot;</span><span class="token punctuation">,</span> <span class="token keyword">enum</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token string">'guest'</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h5 id="whitespace"><a href="#whitespace" aria-hidden="true" class="header-anchor">#</a> Whitespace</h5> <p>把仅包含空格的字段视为错误是很典型的做法，为了额外测试字段是否只有空格，添加 <code>whitespace</code> 属性并设为true。这个属性要求字段必须为 <code>string</code> 类型。</p> <p>如果你想要修正用户的输入而不是测试有无空格，查看 <a href="https://www.cnblogs.com/wozho/p/10955525.html#transform" target="_blank" rel="noopener noreferrer">transform<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 中去除空格的例子。</p> <h5 id="deep-rules-深层规则"><a href="#deep-rules-深层规则" aria-hidden="true" class="header-anchor">#</a> Deep Rules 深层规则</h5> <p>如果需要校验一个深层的对象，你需要使用 <code>fields</code> 属性来设置嵌套的规则</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> descriptor <span class="token operator">=</span> <span class="token punctuation">{</span>
+  address<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    fields<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      street<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      city<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      zip<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> len<span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">&quot;invalid zip&quot;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> validator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema</span><span class="token punctuation">(</span>descriptor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+validator<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">{</span> address<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">errors<span class="token punctuation">,</span> fields</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// errors for address.street, address.city, address.zip</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>需要注意的是，如果没有在父规则上指定 <code>required</code> 属性，在校验对象中不存在这个属性是完全合法的，嵌套的深层规则也不会运行。</p> <h5 id="defaultfield-默认字段"><a href="#defaultfield-默认字段" aria-hidden="true" class="header-anchor">#</a> defaultField 默认字段</h5> <p><code>defaultField</code> 属性可以在 <code>array</code> 和 <code>object</code> 类型中用于校验所有的值，它可以是一个包含有校验规则的对象或数组。 例子如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> descriptor <span class="token operator">=</span> <span class="token punctuation">{</span>
+  urls<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">&quot;array&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    defaultField<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;url&quot;</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意，<code>defaultField</code> 是 <code>fields</code> 的扩展，见 <a href="https://www.cnblogs.com/wozho/p/10955525.html#deep-rules" target="_blank" rel="noopener noreferrer">deep rules<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <h5 id="transform-变换"><a href="#transform-变换" aria-hidden="true" class="header-anchor">#</a> Transform 变换</h5> <p>有时候需要在校验前修改值，强制修改为特定格式。 为此在校验规则中添加了 <code>transform</code>， 这个属性会在校验前执行，以适当的方式改变原始对象的值。（也就是返回值会作用在原始对象的值上）</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> schema <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'async-validator'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> sanitize <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'validator'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sanitize<span class="token punctuation">;</span>
+<span class="token keyword">var</span> descriptor <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+    required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> pattern<span class="token punctuation">:</span> <span class="token regex">/^[a-z]+$/</span><span class="token punctuation">,</span>
+    <span class="token function">transform</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">sanitize</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> validator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">schema</span><span class="token punctuation">(</span>descriptor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> source <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&quot; user  &quot;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+validator<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> assert<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span>source<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>如果没有 <code>transform</code> 函数校验会失败因为前后空格导致正则与输入不符，但在添加了 <code>transform</code> 函数后便可通过因为字段已经被清洗了（或者翻译为使输入值符合预期格式）</p> <h5 id="messages-提示信息"><a href="#messages-提示信息" aria-hidden="true" class="header-anchor">#</a> Messages 提示信息</h5> <p>在某些需求下，你可能需要格式化支持或者想要不同校验错误信息。</p> <p>最简单的方式就是直接为 <code>message</code> 属性赋值：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">&quot;Name is required&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><p>消息可以是任意类型的，比如 <code>JSX</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token operator">&lt;</span>b<span class="token operator">&gt;</span>Name is required<span class="token operator">&lt;</span><span class="token operator">/</span>b<span class="token operator">&gt;</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><p>也可以是函数，比如使用 vue-i18n 时：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>name<span class="token punctuation">:</span><span class="token punctuation">{</span>type<span class="token punctuation">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token function-variable function">message</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span> <span class="token string">'name is required'</span> <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="_5、跨域处理cors"><a href="#_5、跨域处理cors" aria-hidden="true" class="header-anchor">#</a> 5、跨域处理cors</h3> <p>当前端配置了proxy，后端同样需要配置跨域处理cors，并且还需要关闭csrf 校验，这样接口才能进行正常访问。</p> <p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i egg-cors --save
+</code></pre></div><p><strong>启用插件</strong></p> <p>config/plugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/** @type Egg.EggPlugin */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  cors<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">'egg-cors'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>配置插件</strong></p> <p><em>config/config.default.js</em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* eslint valid-jsdoc: &quot;off&quot; */</span>
+
+<span class="token string">'use strict'</span>
+
+<span class="token comment">/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">appInfo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token operator">...</span>
+  <span class="token comment">// add your user config here</span>
+  <span class="token keyword">const</span> userConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    cors<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      origin<span class="token punctuation">:</span> <span class="token string">'http://localhost:3000'</span><span class="token punctuation">,</span> <span class="token comment">// 匹配规则  域名+端口  *则为全匹配</span>
+      allowMethods<span class="token punctuation">:</span> <span class="token string">'GET,HEAD,PUT,POST,DELETE,PATCH'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// api的接口关闭csrf 校验，不然会报错</span>
+    security<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      csrf<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 一定要为true</span>
+        <span class="token function-variable function">ignore</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">ctx</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// restfull api   /api/v1 不进行安全校验</span>
+          <span class="token keyword">const</span> reg <span class="token operator">=</span> <span class="token regex">/\/api\/v1/</span>
+          <span class="token comment">// 白名单不进行校验</span>
+          <span class="token keyword">const</span> ignoreList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'/login'</span><span class="token punctuation">,</span> <span class="token string">'/reg'</span><span class="token punctuation">]</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>
+            reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span> <span class="token operator">||</span>
+            ignoreList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>url<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span>
+          <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">return</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>config<span class="token punctuation">,</span>
+    <span class="token operator">...</span>userConfig<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="_6、redis"><a href="#_6、redis" aria-hidden="true" class="header-anchor">#</a> 6、redis</h3> <p><a href="https://www.npmjs.com/package/egg-redis" target="_blank" rel="noopener noreferrer">文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i egg-redis --save
+</code></pre></div><p><strong>启用插件</strong></p> <p>config/plugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/** @type Egg.EggPlugin */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  redis<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    enable<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token keyword">package</span><span class="token punctuation">:</span> <span class="token string">'egg-redis'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>配置插件</strong></p> <p><em>config/config.default.js</em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* eslint valid-jsdoc: &quot;off&quot; */</span>
+
+<span class="token string">'use strict'</span>
+
+<span class="token comment">/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">appInfo</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+ <span class="token operator">...</span>
+  <span class="token comment">// add your user config here</span>
+  <span class="token keyword">const</span> userConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+   redis<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      client<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        client<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        port<span class="token punctuation">:</span> <span class="token number">6379</span><span class="token punctuation">,</span> <span class="token comment">// Redis port</span>
+        host<span class="token punctuation">:</span> <span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span> <span class="token comment">// Redis host</span>
+        password<span class="token punctuation">:</span> <span class="token string">'ask123456'</span><span class="token punctuation">,</span> <span class="token comment">// 密码</span>
+        db<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 默认0号db</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>config<span class="token punctuation">,</span>
+    <span class="token operator">...</span>userConfig<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>使用：</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>redis<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'value'</span><span class="token punctuation">,</span><span class="token string">'EX'</span><span class="token punctuation">,</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">60</span><span class="token punctuation">)</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>app<span class="token punctuation">.</span>redis<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_7、验证码"><a href="#_7、验证码" aria-hidden="true" class="header-anchor">#</a> 7、验证码</h3> <p>为了防止用户利用机器人自动注册、登录、灌水，我们需要验证码功能</p> <h4 id="_7-1：svg验证码"><a href="#_7-1：svg验证码" aria-hidden="true" class="header-anchor">#</a> 7-1：svg验证码</h4> <p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> --save svg-captcha
+</code></pre></div><p><strong>创建控制器public.js</strong></p> <p>controller/v1/public.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+<span class="token keyword">const</span> Controller <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'egg'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Controller
+<span class="token keyword">const</span> svgCaptcha <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'svg-captcha'</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Public</span> <span class="token keyword">extends</span> <span class="token class-name">Controller</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">captcha</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> ctx <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">const</span> captcha <span class="token operator">=</span> svgCaptcha<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      size<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token comment">// 4位随机字符串</span>
+      ignoreChars<span class="token punctuation">:</span> <span class="token string">'0o1i'</span><span class="token punctuation">,</span> <span class="token comment">// 过滤掉字符</span>
+      noise<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 线条数</span>
+      color<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      background<span class="token punctuation">:</span> <span class="token string">'#ffffff'</span><span class="token punctuation">,</span> <span class="token comment">// 背景色</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    ctx<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">'svg'</span>
+    ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> captcha<span class="token punctuation">.</span>data
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Public
+
+
+</code></pre></div><p>svgCaptcha.create(options)</p> <blockquote><ul><li>size`: 4  // 4位随机字符串</li> <li><code>ignoreChars</code>: '0o1i' // 过滤掉字符</li> <li><code>noise</code>: 1 // 线条数</li> <li><code>color</code>: true // characters will have distinct colors instead of grey, true if background option is set</li> <li><code>background</code>: '#ffffff' // 背景色</li></ul></blockquote> <p>这个函数返回一个对象,具有以下属性:</p> <blockquote><ul><li><code>data</code>: string // svg 图像</li> <li><code>text</code>: string // 验证码文字</li></ul></blockquote> <h3 id="_8、加密bcrypt"><a href="#_8、加密bcrypt" aria-hidden="true" class="header-anchor">#</a> 8、加密bcrypt</h3> <p><a href="https://www.npmjs.com/package/egg-bcrypt" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><strong>安装</strong></p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> i egg-bcrypt --save
+</code></pre></div><p><strong>启用插件</strong></p> <p>config/plugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span>
+
+<span class="token comment">/** @type Egg.EggPlugin */</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+	bcrypt<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      saltRounds<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token comment">// default 10</span>
+    <span class="token punctuation">}</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p><strong>使用</strong></p> <ul><li><p>将值转为hash</p> <p><code>@params plainText(string)</code></p> <p><code>@return Promise</code></p> <div class="language- extra-class"><pre class="language-text"><code>ctx.genHash(plainText)
+</code></pre></div></li> <li><p><strong>[async]</strong> 比对结果</p> <p><code>@params plainText (string)</code></p> <p><code>@params hash (string)</code></p> <p><code>@return Boolean true/false</code></p> <div class="language- extra-class"><pre class="language-text"><code>ctx.compare(plainText, hash)
+</code></pre></div></li></ul> <h3 id="_8、token"><a href="#_8、token" aria-hidden="true" class="header-anchor">#</a> 8、token</h3> <h3 id="_8、自定义中间件"><a href="#_8、自定义中间件" aria-hidden="true" class="header-anchor">#</a> 8、自定义中间件</h3> <h4 id="统一错误处理"><a href="#统一错误处理" aria-hidden="true" class="header-anchor">#</a> 统一错误处理</h4> <p><strong>middleware/error_handle.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">option<span class="token punctuation">,</span> app</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">await</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 所有异常都在app触发一个error时间</span>
+      app<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> err<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> status <span class="token operator">=</span> err<span class="token punctuation">.</span>status <span class="token operator">||</span> <span class="token number">500</span><span class="token punctuation">;</span>
+      <span class="token comment">// 生产环境500错误的详细内容不返回给客户端</span>
+      <span class="token keyword">const</span> error <span class="token operator">=</span> status <span class="token operator">===</span> <span class="token number">500</span> <span class="token operator">&amp;&amp;</span> app<span class="token punctuation">.</span>config<span class="token punctuation">.</span>env <span class="token operator">===</span> <span class="token string">'prod'</span> <span class="token operator">?</span> <span class="token string">'Internal Server Error'</span> <span class="token punctuation">:</span> err<span class="token punctuation">.</span>message<span class="token punctuation">;</span>
+      <span class="token comment">//   读取所有错误信息设置到响应中</span>
+      ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token punctuation">{</span>
+        code<span class="token punctuation">:</span> status<span class="token punctuation">,</span>
+        message<span class="token punctuation">:</span>error
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token comment">// 用户定义型错误-&gt;请求格式正确，但是由于含有语义错误，无法响应</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>status <span class="token operator">===</span> <span class="token number">422</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span>body<span class="token punctuation">.</span>error <span class="token operator">=</span> err<span class="token punctuation">.</span>errors<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      ctx<span class="token punctuation">.</span>status <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><p><strong>启用中间件</strong></p> <p>config.default.js</p> <div class="language-js extra-class"><pre class="language-js"><code>config<span class="token punctuation">.</span>middleware <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'errorHandle'</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//以下划线进行命名的中间件，需要改成驼峰是</span>
+</code></pre></div><h2 id="登录模块"><a href="#登录模块" aria-hidden="true" class="header-anchor">#</a> 登录模块</h2> <h3 id="用户登录"><a href="#用户登录" aria-hidden="true" class="header-anchor">#</a> 用户登录</h3> <h3 id="用户注册"><a href="#用户注册" aria-hidden="true" class="header-anchor">#</a> 用户注册</h3> <h2 id="公共模块"><a href="#公共模块" aria-hidden="true" class="header-anchor">#</a> 公共模块</h2> <h2 id="svg验证码"><a href="#svg验证码" aria-hidden="true" class="header-anchor">#</a> svg验证码</h2> <p>通过svg-captcha生成验证码，将验证码存储到redis,</p> <div class="language- extra-class"><pre class="language-text"><code>const svgCaptcha = require('svg-captcha')
+
+async captcha() {
+    const { ctx, app } = this
+    // 通过前端传回uuid
+    const sid = ctx.request.body.sid
+    const captcha = svgCaptcha.create({
+      size: 4, // 4位随机字符串
+      ignoreChars: '0o1i', // 过滤掉字符
+      noise: 1, // 线条数
+      color: true,
+      width: 80,
+      height: 36,
+      fontSize: 42,
+      background: '#ffffff', // 背景色
+    })
+    await ctx.helper.store.set(app, 'captcha_' + sid, captcha.text, 60 * 10) // 10分钟
+    // await app.redis.set('captcha_' + uuid, captcha.text, 'EX', 60 * 10) // 10分钟
+
+    ctx.body = {
+      code: 200,
+      data: captcha.data,
+      message: '',
+    }
+  }
+</code></pre></div><p>校验验证码</p> <div class="language- extra-class"><pre class="language-text"><code>// 比对验证码
+const captchaCode = await ctx.helper.store.get(this.app, 'captcha_' + uuid)
+// await this.app.redis.get('captcha_' + uuid)
+if (!this.ctx.helper.checkCaptcha(code, captchaCode)) {
+return this.error('验证码错误')
+}
+</code></pre></div><p>路径配置 config/config.default.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">...</span>
+ <span class="token keyword">const</span> userConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    myAppName<span class="token punctuation">:</span> <span class="token string">'egg ask'</span><span class="token punctuation">,</span>
+    upload<span class="token punctuation">:</span> <span class="token string">'app/public/upload/'</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span>
+<span class="token operator">...</span>
+</code></pre></div><p>需要用到的助手函数 helper.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> dayjs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dayjs'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> v4<span class="token punctuation">:</span> uuidv4 <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uuid'</span><span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * 根据stream创建路径
+ * @param {*} stream
+ */</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">createFilePath</span><span class="token punctuation">(</span><span class="token parameter">stream</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> dirname <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>upload <span class="token operator">+</span> <span class="token function">dayjs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'YYYYMMDD'</span><span class="token punctuation">)</span>
+  <span class="token comment">// 生成目录</span>
+  <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">ensureDir</span><span class="token punctuation">(</span>dirname<span class="token punctuation">)</span>
+  <span class="token comment">// 文件名</span>
+  <span class="token keyword">const</span> fileName <span class="token operator">=</span> <span class="token function">uuidv4</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// 扩展名</span>
+  <span class="token keyword">const</span> extname <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span>stream<span class="token punctuation">.</span>filename<span class="token punctuation">)</span>
+  <span class="token comment">// 完整的文件路径</span>
+  <span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>dirname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>extname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+  <span class="token keyword">return</span> target
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="单文件上传"><a href="#单文件上传" aria-hidden="true" class="header-anchor">#</a> 单文件上传</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> pump <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mz-modules/pump'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs-extra'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 单文件上传</span>
+  <span class="token keyword">async</span> <span class="token function">upload</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> ctx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx
+    <span class="token comment">// 获取文件流</span>
+    <span class="token keyword">const</span> stream <span class="token operator">=</span> <span class="token keyword">await</span> ctx<span class="token punctuation">.</span><span class="token function">getFileStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 获取需要上传的完整路径：&quot;app/public/upload/20201119/1ae25685-002e-4ea4-8019-a0b3e356b798.png&quot;</span>
+    <span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token keyword">await</span> ctx<span class="token punctuation">.</span>helper<span class="token punctuation">.</span><span class="token function">createFilePath</span><span class="token punctuation">(</span>stream<span class="token punctuation">)</span>
+    <span class="token comment">// 写入文件</span>
+    <span class="token keyword">const</span> writeStream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">createWriteStream</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+    <span class="token keyword">await</span> <span class="token function">pump</span><span class="token punctuation">(</span>stream<span class="token punctuation">,</span> writeStream<span class="token punctuation">)</span> <span class="token comment">// 或者 stream.pipe(writeStream);</span>
+    ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token punctuation">{</span>
+      code<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        url<span class="token punctuation">:</span> target<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 移除前面的app</span>
+        <span class="token comment">// 所有表单字段都能通过 `stream.fields` 获取到</span>
+        fields<span class="token punctuation">:</span> stream<span class="token punctuation">.</span>fields<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      message<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h3 id="多文件上传"><a href="#多文件上传" aria-hidden="true" class="header-anchor">#</a> 多文件上传</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> pump <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mz-modules/pump'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs-extra'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 多文件上传</span>
+  <span class="token keyword">async</span> <span class="token function">multiUpload</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> ctx <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+    <span class="token keyword">const</span> parts <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">multipart</span><span class="token punctuation">(</span><span class="token punctuation">{</span> autoFields<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> files <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">let</span> stream
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>stream <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">parts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>stream<span class="token punctuation">.</span>filename<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> fieldname <span class="token operator">=</span> stream<span class="token punctuation">.</span>fieldname
+      <span class="token comment">// 获取需要上传的完整路径：&quot;app/public/upload/20201119/1ae25685-002e-4ea4-8019-a0b3e356b798.png&quot;</span>
+      <span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token keyword">await</span> ctx<span class="token punctuation">.</span>helper<span class="token punctuation">.</span><span class="token function">createFilePath</span><span class="token punctuation">(</span>stream<span class="token punctuation">)</span>
+      <span class="token keyword">const</span> writeStream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">createWriteStream</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+      <span class="token keyword">await</span> <span class="token function">pump</span><span class="token punctuation">(</span>stream<span class="token punctuation">,</span> writeStream<span class="token punctuation">)</span>
+      files<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>fieldname<span class="token punctuation">]</span><span class="token punctuation">:</span> target<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'app'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    ctx<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token punctuation">{</span>
+      code<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        files<span class="token punctuation">,</span>
+        fields<span class="token punctuation">:</span> parts<span class="token punctuation">.</span>field<span class="token punctuation">,</span> <span class="token comment">// 所有表单字段都能通过 `parts.fields` 获取到</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      message<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/24/2020, 5:35:39 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.ee223f02.js" defer></script><script src="/blog/assets/js/2.f364336e.js" defer></script><script src="/blog/assets/js/20.472050f8.js" defer></script>
+  </body>
+</html>
